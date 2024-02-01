@@ -18,6 +18,7 @@
 		554048CD2B6C4A3A00B22661 /* FontSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048CC2B6C4A3A00B22661 /* FontSettings.swift */; };
 		554048D12B6C4B9000B22661 /* NovelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048D02B6C4B9000B22661 /* NovelCollection.swift */; };
 		554048D42B6C4BA200B22661 /* Novel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048D32B6C4BA200B22661 /* Novel.swift */; };
+		554048D82B6C5DFD00B22661 /* NovelCollectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048D72B6C5DFD00B22661 /* NovelCollectionCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		554048CC2B6C4A3A00B22661 /* FontSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSettings.swift; sourceTree = "<group>"; };
 		554048D02B6C4B9000B22661 /* NovelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelCollection.swift; sourceTree = "<group>"; };
 		554048D32B6C4BA200B22661 /* Novel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Novel.swift; sourceTree = "<group>"; };
+		554048D72B6C5DFD00B22661 /* NovelCollectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelCollectionCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 		554048CF2B6C4B8300B22661 /* NovelCollection */ = {
 			isa = PBXGroup;
 			children = (
+				554048D52B6C5DE900B22661 /* components */,
 				554048D02B6C4B9000B22661 /* NovelCollection.swift */,
 			);
 			path = NovelCollection;
@@ -201,6 +204,22 @@
 				554048D32B6C4BA200B22661 /* Novel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		554048D52B6C5DE900B22661 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				554048D62B6C5DEF00B22661 /* NovelCollectionCard */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		554048D62B6C5DEF00B22661 /* NovelCollectionCard */ = {
+			isa = PBXGroup;
+			children = (
+				554048D72B6C5DFD00B22661 /* NovelCollectionCard.swift */,
+			);
+			path = NovelCollectionCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +357,7 @@
 				554048D12B6C4B9000B22661 /* NovelCollection.swift in Sources */,
 				554048CD2B6C4A3A00B22661 /* FontSettings.swift in Sources */,
 				554048C62B6C338B00B22661 /* ReadingScreen.swift in Sources */,
+				554048D82B6C5DFD00B22661 /* NovelCollectionCard.swift in Sources */,
 				5540488F2B6C090600B22661 /* EratoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
