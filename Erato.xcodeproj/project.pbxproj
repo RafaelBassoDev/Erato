@@ -13,6 +13,7 @@
 		554048A22B6C090900B22661 /* EratoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048A12B6C090900B22661 /* EratoTests.swift */; };
 		554048AC2B6C090900B22661 /* EratoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048AB2B6C090900B22661 /* EratoUITests.swift */; };
 		554048AE2B6C090900B22661 /* EratoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048AD2B6C090900B22661 /* EratoUITestsLaunchTests.swift */; };
+		554048C62B6C338B00B22661 /* ReadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048C52B6C338B00B22661 /* ReadingScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		554048A72B6C090900B22661 /* EratoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EratoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		554048AB2B6C090900B22661 /* EratoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EratoUITests.swift; sourceTree = "<group>"; };
 		554048AD2B6C090900B22661 /* EratoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EratoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		554048C52B6C338B00B22661 /* ReadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		554048BE2B6C10B900B22661 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				554048C42B6C337B00B22661 /* ReadingScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -146,6 +149,14 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		554048C42B6C337B00B22661 /* ReadingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				554048C52B6C338B00B22661 /* ReadingScreen.swift */,
+			);
+			path = ReadingScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554048C62B6C338B00B22661 /* ReadingScreen.swift in Sources */,
 				5540488F2B6C090600B22661 /* EratoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
