@@ -29,7 +29,10 @@ struct NovelCollectionCard: View {
             .multilineTextAlignment(.leading)
         }
         .frame(maxWidth: .infinity, maxHeight: maxHeight, alignment: .leading)
-        .foregroundStyle(.primary)
+        .navigationDestination(for: Novel.self) { novel in
+            Text(novel.title)
+                .navigationTitle(novel.title)
+        }
     }
 }
 

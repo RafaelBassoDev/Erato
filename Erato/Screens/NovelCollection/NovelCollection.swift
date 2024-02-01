@@ -17,12 +17,16 @@ struct NovelCollection: View {
                     ForEach(novels, id: \.self) { novel in
                         NavigationLink(value: novel) {
                             NovelCollectionCard(novel: novel, maxHeight: proxy.size.height * 0.2)
-                                .padding(.horizontal)
                         }
+                        .padding(.horizontal)
+                        .buttonStyle(.plain)
                     }
                 }
             }
+            
         }
+        .navigationTitle("Novels")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -32,5 +36,7 @@ struct NovelCollection: View {
         let novel = Novel(title: "Sword God in a Magical World", description: "Some DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome Description", chapters: [])
         novels.append(novel)
     }
-    return NovelCollection(novels: novels)
+    return NavigationStack {
+        NovelCollection(novels: novels)
+    }
 }
