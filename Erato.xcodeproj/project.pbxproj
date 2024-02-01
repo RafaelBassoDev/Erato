@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5540488F2B6C090600B22661 /* EratoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540488E2B6C090600B22661 /* EratoApp.swift */; };
-		554048912B6C090600B22661 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048902B6C090600B22661 /* ContentView.swift */; };
-		554048932B6C090600B22661 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048922B6C090600B22661 /* Item.swift */; };
 		554048952B6C090800B22661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554048942B6C090800B22661 /* Assets.xcassets */; };
 		554048982B6C090800B22661 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554048972B6C090800B22661 /* Preview Assets.xcassets */; };
 		554048A22B6C090900B22661 /* EratoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048A12B6C090900B22661 /* EratoTests.swift */; };
@@ -37,8 +35,6 @@
 /* Begin PBXFileReference section */
 		5540488B2B6C090600B22661 /* Erato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5540488E2B6C090600B22661 /* EratoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EratoApp.swift; sourceTree = "<group>"; };
-		554048902B6C090600B22661 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		554048922B6C090600B22661 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		554048942B6C090800B22661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		554048972B6C090800B22661 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5540489D2B6C090900B22661 /* EratoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EratoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +137,6 @@
 		554048BE2B6C10B900B22661 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				554048C02B6C10F100B22661 /* ContentView */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -151,15 +146,6 @@
 			children = (
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		554048C02B6C10F100B22661 /* ContentView */ = {
-			isa = PBXGroup;
-			children = (
-				554048902B6C090600B22661 /* ContentView.swift */,
-				554048922B6C090600B22661 /* Item.swift */,
-			);
-			path = ContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +278,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				554048912B6C090600B22661 /* ContentView.swift in Sources */,
-				554048932B6C090600B22661 /* Item.swift in Sources */,
 				5540488F2B6C090600B22661 /* EratoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
