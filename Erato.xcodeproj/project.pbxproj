@@ -14,6 +14,7 @@
 		554048AC2B6C090900B22661 /* EratoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048AB2B6C090900B22661 /* EratoUITests.swift */; };
 		554048AE2B6C090900B22661 /* EratoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048AD2B6C090900B22661 /* EratoUITestsLaunchTests.swift */; };
 		554048C62B6C338B00B22661 /* ReadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048C52B6C338B00B22661 /* ReadingScreen.swift */; };
+		554048CA2B6C383300B22661 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048C92B6C383300B22661 /* Chapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		554048AB2B6C090900B22661 /* EratoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EratoUITests.swift; sourceTree = "<group>"; };
 		554048AD2B6C090900B22661 /* EratoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EratoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		554048C52B6C338B00B22661 /* ReadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingScreen.swift; sourceTree = "<group>"; };
+		554048C92B6C383300B22661 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,9 +156,18 @@
 		554048C42B6C337B00B22661 /* ReadingScreen */ = {
 			isa = PBXGroup;
 			children = (
+				554048C82B6C382000B22661 /* Models */,
 				554048C52B6C338B00B22661 /* ReadingScreen.swift */,
 			);
 			path = ReadingScreen;
+			sourceTree = "<group>";
+		};
+		554048C82B6C382000B22661 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				554048C92B6C383300B22661 /* Chapter.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554048CA2B6C383300B22661 /* Chapter.swift in Sources */,
 				554048C62B6C338B00B22661 /* ReadingScreen.swift in Sources */,
 				5540488F2B6C090600B22661 /* EratoApp.swift in Sources */,
 			);
