@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5540488F2B6C090600B22661 /* EratoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540488E2B6C090600B22661 /* EratoApp.swift */; };
+		554048912B6C090600B22661 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048902B6C090600B22661 /* ContentView.swift */; };
+		554048932B6C090600B22661 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048922B6C090600B22661 /* Item.swift */; };
+		554048952B6C090800B22661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554048942B6C090800B22661 /* Assets.xcassets */; };
+		554048982B6C090800B22661 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554048972B6C090800B22661 /* Preview Assets.xcassets */; };
+		554048A22B6C090900B22661 /* EratoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048A12B6C090900B22661 /* EratoTests.swift */; };
+		554048AC2B6C090900B22661 /* EratoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048AB2B6C090900B22661 /* EratoUITests.swift */; };
+		554048AE2B6C090900B22661 /* EratoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048AD2B6C090900B22661 /* EratoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5540489E2B6C090900B22661 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 554048832B6C090600B22661 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5540488A2B6C090600B22661;
+			remoteInfo = Erato;
+		};
+		554048A82B6C090900B22661 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 554048832B6C090600B22661 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5540488A2B6C090600B22661;
+			remoteInfo = Erato;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5540488B2B6C090600B22661 /* Erato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erato.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5540488E2B6C090600B22661 /* EratoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EratoApp.swift; sourceTree = "<group>"; };
+		554048902B6C090600B22661 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		554048922B6C090600B22661 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		554048942B6C090800B22661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		554048972B6C090800B22661 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5540489D2B6C090900B22661 /* EratoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EratoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		554048A12B6C090900B22661 /* EratoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EratoTests.swift; sourceTree = "<group>"; };
+		554048A72B6C090900B22661 /* EratoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EratoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		554048AB2B6C090900B22661 /* EratoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EratoUITests.swift; sourceTree = "<group>"; };
+		554048AD2B6C090900B22661 /* EratoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EratoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		554048882B6C090600B22661 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5540489A2B6C090900B22661 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554048A42B6C090900B22661 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		554048822B6C090600B22661 = {
+			isa = PBXGroup;
+			children = (
+				5540488D2B6C090600B22661 /* Erato */,
+				554048A02B6C090900B22661 /* EratoTests */,
+				554048AA2B6C090900B22661 /* EratoUITests */,
+				5540488C2B6C090600B22661 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5540488C2B6C090600B22661 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5540488B2B6C090600B22661 /* Erato.app */,
+				5540489D2B6C090900B22661 /* EratoTests.xctest */,
+				554048A72B6C090900B22661 /* EratoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5540488D2B6C090600B22661 /* Erato */ = {
+			isa = PBXGroup;
+			children = (
+				554048BF2B6C10BE00B22661 /* Services */,
+				554048BE2B6C10B900B22661 /* Screens */,
+				554048BD2B6C10AC00B22661 /* Application */,
+				554048962B6C090800B22661 /* Preview Content */,
+			);
+			path = Erato;
+			sourceTree = "<group>";
+		};
+		554048962B6C090800B22661 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				554048972B6C090800B22661 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		554048A02B6C090900B22661 /* EratoTests */ = {
+			isa = PBXGroup;
+			children = (
+				554048A12B6C090900B22661 /* EratoTests.swift */,
+			);
+			path = EratoTests;
+			sourceTree = "<group>";
+		};
+		554048AA2B6C090900B22661 /* EratoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				554048AB2B6C090900B22661 /* EratoUITests.swift */,
+				554048AD2B6C090900B22661 /* EratoUITestsLaunchTests.swift */,
+			);
+			path = EratoUITests;
+			sourceTree = "<group>";
+		};
+		554048BD2B6C10AC00B22661 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5540488E2B6C090600B22661 /* EratoApp.swift */,
+				554048942B6C090800B22661 /* Assets.xcassets */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		554048BE2B6C10B900B22661 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				554048C02B6C10F100B22661 /* ContentView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		554048BF2B6C10BE00B22661 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		554048C02B6C10F100B22661 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				554048902B6C090600B22661 /* ContentView.swift */,
+				554048922B6C090600B22661 /* Item.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5540488A2B6C090600B22661 /* Erato */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 554048B12B6C090900B22661 /* Build configuration list for PBXNativeTarget "Erato" */;
+			buildPhases = (
+				554048872B6C090600B22661 /* Sources */,
+				554048882B6C090600B22661 /* Frameworks */,
+				554048892B6C090600B22661 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Erato;
+			productName = Erato;
+			productReference = 5540488B2B6C090600B22661 /* Erato.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5540489C2B6C090900B22661 /* EratoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 554048B42B6C090900B22661 /* Build configuration list for PBXNativeTarget "EratoTests" */;
+			buildPhases = (
+				554048992B6C090900B22661 /* Sources */,
+				5540489A2B6C090900B22661 /* Frameworks */,
+				5540489B2B6C090900B22661 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5540489F2B6C090900B22661 /* PBXTargetDependency */,
+			);
+			name = EratoTests;
+			productName = EratoTests;
+			productReference = 5540489D2B6C090900B22661 /* EratoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		554048A62B6C090900B22661 /* EratoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 554048B72B6C090900B22661 /* Build configuration list for PBXNativeTarget "EratoUITests" */;
+			buildPhases = (
+				554048A32B6C090900B22661 /* Sources */,
+				554048A42B6C090900B22661 /* Frameworks */,
+				554048A52B6C090900B22661 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				554048A92B6C090900B22661 /* PBXTargetDependency */,
+			);
+			name = EratoUITests;
+			productName = EratoUITests;
+			productReference = 554048A72B6C090900B22661 /* EratoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		554048832B6C090600B22661 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					5540488A2B6C090600B22661 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					5540489C2B6C090900B22661 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 5540488A2B6C090600B22661;
+					};
+					554048A62B6C090900B22661 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 5540488A2B6C090600B22661;
+					};
+				};
+			};
+			buildConfigurationList = 554048862B6C090600B22661 /* Build configuration list for PBXProject "Erato" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 554048822B6C090600B22661;
+			productRefGroup = 5540488C2B6C090600B22661 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5540488A2B6C090600B22661 /* Erato */,
+				5540489C2B6C090900B22661 /* EratoTests */,
+				554048A62B6C090900B22661 /* EratoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		554048892B6C090600B22661 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554048982B6C090800B22661 /* Preview Assets.xcassets in Resources */,
+				554048952B6C090800B22661 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5540489B2B6C090900B22661 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554048A52B6C090900B22661 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		554048872B6C090600B22661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554048912B6C090600B22661 /* ContentView.swift in Sources */,
+				554048932B6C090600B22661 /* Item.swift in Sources */,
+				5540488F2B6C090600B22661 /* EratoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554048992B6C090900B22661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554048A22B6C090900B22661 /* EratoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554048A32B6C090900B22661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554048AE2B6C090900B22661 /* EratoUITestsLaunchTests.swift in Sources */,
+				554048AC2B6C090900B22661 /* EratoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5540489F2B6C090900B22661 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5540488A2B6C090600B22661 /* Erato */;
+			targetProxy = 5540489E2B6C090900B22661 /* PBXContainerItemProxy */;
+		};
+		554048A92B6C090900B22661 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5540488A2B6C090600B22661 /* Erato */;
+			targetProxy = 554048A82B6C090900B22661 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		554048AF2B6C090900B22661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		554048B02B6C090900B22661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		554048B22B6C090900B22661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Erato/Preview Content\"";
+				DEVELOPMENT_TEAM = 9VJNM48GB5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcbdev.Erato;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		554048B32B6C090900B22661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Erato/Preview Content\"";
+				DEVELOPMENT_TEAM = 9VJNM48GB5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcbdev.Erato;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		554048B52B6C090900B22661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9VJNM48GB5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcbdev.EratoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Erato.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Erato";
+			};
+			name = Debug;
+		};
+		554048B62B6C090900B22661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9VJNM48GB5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcbdev.EratoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Erato.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Erato";
+			};
+			name = Release;
+		};
+		554048B82B6C090900B22661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9VJNM48GB5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcbdev.EratoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Erato;
+			};
+			name = Debug;
+		};
+		554048B92B6C090900B22661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9VJNM48GB5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcbdev.EratoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Erato;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		554048862B6C090600B22661 /* Build configuration list for PBXProject "Erato" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				554048AF2B6C090900B22661 /* Debug */,
+				554048B02B6C090900B22661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		554048B12B6C090900B22661 /* Build configuration list for PBXNativeTarget "Erato" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				554048B22B6C090900B22661 /* Debug */,
+				554048B32B6C090900B22661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		554048B42B6C090900B22661 /* Build configuration list for PBXNativeTarget "EratoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				554048B52B6C090900B22661 /* Debug */,
+				554048B62B6C090900B22661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		554048B72B6C090900B22661 /* Build configuration list for PBXNativeTarget "EratoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				554048B82B6C090900B22661 /* Debug */,
+				554048B92B6C090900B22661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 554048832B6C090600B22661 /* Project object */;
+}
