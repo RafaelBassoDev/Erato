@@ -24,6 +24,7 @@
 		554048E22B6D5A5C00B22661 /* NovelDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048E12B6D5A5C00B22661 /* NovelDetailHeader.swift */; };
 		554048E42B6D5E1F00B22661 /* TabMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048E32B6D5E1F00B22661 /* TabMenuBar.swift */; };
 		554048E72B6D5EAC00B22661 /* TabMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048E62B6D5EAC00B22661 /* TabMenuOption.swift */; };
+		554048E92B6D726700B22661 /* NovelDetailDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048E82B6D726700B22661 /* NovelDetailDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		554048E12B6D5A5C00B22661 /* NovelDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDetailHeader.swift; sourceTree = "<group>"; };
 		554048E32B6D5E1F00B22661 /* TabMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuBar.swift; sourceTree = "<group>"; };
 		554048E62B6D5EAC00B22661 /* TabMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuOption.swift; sourceTree = "<group>"; };
+		554048E82B6D726700B22661 /* NovelDetailDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDetailDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				554048E12B6D5A5C00B22661 /* NovelDetailHeader.swift */,
+				554048E82B6D726700B22661 /* NovelDetailDescription.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				554048E72B6D5EAC00B22661 /* TabMenuOption.swift in Sources */,
 				554048CD2B6C4A3A00B22661 /* FontSettings.swift in Sources */,
 				554048E22B6D5A5C00B22661 /* NovelDetailHeader.swift in Sources */,
+				554048E92B6D726700B22661 /* NovelDetailDescription.swift in Sources */,
 				554048C62B6C338B00B22661 /* ReadingScreen.swift in Sources */,
 				554048D82B6C5DFD00B22661 /* NovelCollectionCard.swift in Sources */,
 				5540488F2B6C090600B22661 /* EratoApp.swift in Sources */,

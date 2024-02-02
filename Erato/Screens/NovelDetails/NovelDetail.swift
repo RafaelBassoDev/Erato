@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NovelDetail: View {
+    @State var currentSubMenu: String = "Description"
+    
     let novel: Novel
     
     var body: some View {
@@ -16,17 +18,21 @@ struct NovelDetail: View {
                 .padding()
             
             TabMenuBar(options: ["Description", "Chapters"]) { option in
-                print(option)
+                currentSubMenu = option
             }
             
-            Rectangle()
-                .fill(.purple)
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+            if (currentSubMenu == "Description") {
+                NovelDetailDescription(description: novel.description)
+                    .padding(.bottom)
+            } else {
+                Text("Aoba")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
         }
     }
 }
 
 #Preview {
-    let novel = Novel(title: "Sword God in a Magical World", author: "Er Gen", description: "Some DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome Description", chapters: [], isCompleted: false)
+    let novel = Novel(title: "Sword God in a Magical World", author: "Er Gen", description: "Some DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description", chapters: [], isCompleted: false)
     return NovelDetail(novel: novel)
 }
