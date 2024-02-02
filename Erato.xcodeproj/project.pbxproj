@@ -19,7 +19,11 @@
 		554048D12B6C4B9000B22661 /* NovelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048D02B6C4B9000B22661 /* NovelCollection.swift */; };
 		554048D42B6C4BA200B22661 /* Novel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048D32B6C4BA200B22661 /* Novel.swift */; };
 		554048D82B6C5DFD00B22661 /* NovelCollectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048D72B6C5DFD00B22661 /* NovelCollectionCard.swift */; };
-		554048DB2B6D52D400B22661 /* NovelDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048DA2B6D52D400B22661 /* NovelDetails.swift */; };
+		554048DB2B6D52D400B22661 /* NovelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048DA2B6D52D400B22661 /* NovelDetail.swift */; };
+		554048DE2B6D548E00B22661 /* IconedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048DD2B6D548E00B22661 /* IconedText.swift */; };
+		554048E22B6D5A5C00B22661 /* NovelDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048E12B6D5A5C00B22661 /* NovelDetailHeader.swift */; };
+		554048E42B6D5E1F00B22661 /* TabMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048E32B6D5E1F00B22661 /* TabMenuBar.swift */; };
+		554048E72B6D5EAC00B22661 /* TabMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048E62B6D5EAC00B22661 /* TabMenuOption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +59,11 @@
 		554048D02B6C4B9000B22661 /* NovelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelCollection.swift; sourceTree = "<group>"; };
 		554048D32B6C4BA200B22661 /* Novel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Novel.swift; sourceTree = "<group>"; };
 		554048D72B6C5DFD00B22661 /* NovelCollectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelCollectionCard.swift; sourceTree = "<group>"; };
-		554048DA2B6D52D400B22661 /* NovelDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDetails.swift; sourceTree = "<group>"; };
+		554048DA2B6D52D400B22661 /* NovelDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDetail.swift; sourceTree = "<group>"; };
+		554048DD2B6D548E00B22661 /* IconedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconedText.swift; sourceTree = "<group>"; };
+		554048E12B6D5A5C00B22661 /* NovelDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDetailHeader.swift; sourceTree = "<group>"; };
+		554048E32B6D5E1F00B22661 /* TabMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuBar.swift; sourceTree = "<group>"; };
+		554048E62B6D5EAC00B22661 /* TabMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 		5540488D2B6C090600B22661 /* Erato */ = {
 			isa = PBXGroup;
 			children = (
+				554048DC2B6D546300B22661 /* Components */,
 				554048BF2B6C10BE00B22661 /* Services */,
 				554048BE2B6C10B900B22661 /* Screens */,
 				554048BD2B6C10AC00B22661 /* Application */,
@@ -228,9 +237,36 @@
 		554048D92B6D52C700B22661 /* NovelDetails */ = {
 			isa = PBXGroup;
 			children = (
-				554048DA2B6D52D400B22661 /* NovelDetails.swift */,
+				554048DF2B6D5A2C00B22661 /* Components */,
+				554048DA2B6D52D400B22661 /* NovelDetail.swift */,
 			);
 			path = NovelDetails;
+			sourceTree = "<group>";
+		};
+		554048DC2B6D546300B22661 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				554048E52B6D5E9A00B22661 /* TabMenuBar */,
+				554048DD2B6D548E00B22661 /* IconedText.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		554048DF2B6D5A2C00B22661 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				554048E12B6D5A5C00B22661 /* NovelDetailHeader.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		554048E52B6D5E9A00B22661 /* TabMenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				554048E32B6D5E1F00B22661 /* TabMenuBar.swift */,
+				554048E62B6D5EAC00B22661 /* TabMenuOption.swift */,
+			);
+			path = TabMenuBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,11 +402,15 @@
 				554048D42B6C4BA200B22661 /* Novel.swift in Sources */,
 				554048CA2B6C383300B22661 /* Chapter.swift in Sources */,
 				554048D12B6C4B9000B22661 /* NovelCollection.swift in Sources */,
+				554048E72B6D5EAC00B22661 /* TabMenuOption.swift in Sources */,
 				554048CD2B6C4A3A00B22661 /* FontSettings.swift in Sources */,
+				554048E22B6D5A5C00B22661 /* NovelDetailHeader.swift in Sources */,
 				554048C62B6C338B00B22661 /* ReadingScreen.swift in Sources */,
 				554048D82B6C5DFD00B22661 /* NovelCollectionCard.swift in Sources */,
 				5540488F2B6C090600B22661 /* EratoApp.swift in Sources */,
-				554048DB2B6D52D400B22661 /* NovelDetails.swift in Sources */,
+				554048DE2B6D548E00B22661 /* IconedText.swift in Sources */,
+				554048DB2B6D52D400B22661 /* NovelDetail.swift in Sources */,
+				554048E42B6D5E1F00B22661 /* TabMenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

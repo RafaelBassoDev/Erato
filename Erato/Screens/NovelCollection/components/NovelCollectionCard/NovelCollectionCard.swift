@@ -37,6 +37,6 @@ struct NovelCollectionCard: View {
 }
 
 #Preview {
-    let novel = Novel(title: "Sword God in a Magical World", description: "Lorem ipsum dolor sit amet, amet sit dolor ipsum lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. \nLorem ipsum dolor sit amet! Lorem dolor ipsum amet sit dolor.", chapters: [])
+    let novel = Novel(title: "Sword God in a Magical World", author: "Er Gen", description: "Lorem ipsum dolor sit amet, amet sit dolor ipsum lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. \nLorem ipsum dolor sit amet! Lorem dolor ipsum amet sit dolor.", chapters: [])
     return NovelCollectionCard(novel: novel, maxHeight: 150)
 }

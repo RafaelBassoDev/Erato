@@ -33,7 +33,7 @@ struct NovelCollection: View {
 #Preview {
     var novels: [Novel] = []
     for _ in 1...5 {
-        let novel = Novel(title: "Sword God in a Magical World", description: "Some DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome Description", chapters: [])
+        let novel = Novel(title: "Sword God in a Magical World", author: "Er Gen", description: "Some DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome Description", chapters: [])
         novels.append(novel)
     }
     return NavigationStack {
