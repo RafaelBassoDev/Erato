@@ -19,6 +19,7 @@
 		554048D12B6C4B9000B22661 /* NovelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048D02B6C4B9000B22661 /* NovelCollection.swift */; };
 		554048D42B6C4BA200B22661 /* Novel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048D32B6C4BA200B22661 /* Novel.swift */; };
 		554048D82B6C5DFD00B22661 /* NovelCollectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048D72B6C5DFD00B22661 /* NovelCollectionCard.swift */; };
+		554048DB2B6D52D400B22661 /* NovelDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048DA2B6D52D400B22661 /* NovelDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		554048D02B6C4B9000B22661 /* NovelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelCollection.swift; sourceTree = "<group>"; };
 		554048D32B6C4BA200B22661 /* Novel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Novel.swift; sourceTree = "<group>"; };
 		554048D72B6C5DFD00B22661 /* NovelCollectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelCollectionCard.swift; sourceTree = "<group>"; };
+		554048DA2B6D52D400B22661 /* NovelDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		554048BE2B6C10B900B22661 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				554048D92B6D52C700B22661 /* NovelDetails */,
 				554048CF2B6C4B8300B22661 /* NovelCollection */,
 				554048C42B6C337B00B22661 /* ReadingScreen */,
 			);
@@ -220,6 +223,14 @@
 				554048D72B6C5DFD00B22661 /* NovelCollectionCard.swift */,
 			);
 			path = NovelCollectionCard;
+			sourceTree = "<group>";
+		};
+		554048D92B6D52C700B22661 /* NovelDetails */ = {
+			isa = PBXGroup;
+			children = (
+				554048DA2B6D52D400B22661 /* NovelDetails.swift */,
+			);
+			path = NovelDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +370,7 @@
 				554048C62B6C338B00B22661 /* ReadingScreen.swift in Sources */,
 				554048D82B6C5DFD00B22661 /* NovelCollectionCard.swift in Sources */,
 				5540488F2B6C090600B22661 /* EratoApp.swift in Sources */,
+				554048DB2B6D52D400B22661 /* NovelDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
