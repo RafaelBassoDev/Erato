@@ -149,7 +149,6 @@
 		554048BE2B6C10B900B22661 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				554048D22B6C4B9900B22661 /* Model */,
 				554048CF2B6C4B8300B22661 /* NovelCollection */,
 				554048C42B6C337B00B22661 /* ReadingScreen */,
 			);
@@ -167,18 +166,18 @@
 		554048C42B6C337B00B22661 /* ReadingScreen */ = {
 			isa = PBXGroup;
 			children = (
-				554048C82B6C382000B22661 /* Models */,
+				554048C82B6C382000B22661 /* Model */,
 				554048C52B6C338B00B22661 /* ReadingScreen.swift */,
 			);
 			path = ReadingScreen;
 			sourceTree = "<group>";
 		};
-		554048C82B6C382000B22661 /* Models */ = {
+		554048C82B6C382000B22661 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				554048C92B6C383300B22661 /* Chapter.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		554048CB2B6C4A2B00B22661 /* Settings */ = {
@@ -192,6 +191,7 @@
 		554048CF2B6C4B8300B22661 /* NovelCollection */ = {
 			isa = PBXGroup;
 			children = (
+				554048D22B6C4B9900B22661 /* Model */,
 				554048D52B6C5DE900B22661 /* components */,
 				554048D02B6C4B9000B22661 /* NovelCollection.swift */,
 			);
