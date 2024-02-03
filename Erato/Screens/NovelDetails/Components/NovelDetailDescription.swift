@@ -14,13 +14,12 @@ struct NovelDetailDescription: View {
         ScrollView {
             Text(description)
                 .font(.subheadline)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
 }
 
 #Preview {
-    let description = "Some DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description"
-    return NovelDetailDescription(description: description)
+    NovelDetailDescription(description: MockData.novels.first!.description)
 }

@@ -25,14 +25,12 @@ struct NovelDetail: View {
                 NovelDetailDescription(description: novel.description)
                     .padding(.bottom)
             } else {
-                Text("Aoba")
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                NovelDetailChapterList(chapters: novel.chapters)
             }
         }
     }
 }
 
 #Preview {
-    let novel = Novel(title: "Sword God in a Magical World", author: "Er Gen", description: "Some DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description DescriptionSome DescriptionSome Description Description", chapters: [], isCompleted: false)
-    return NovelDetail(novel: novel)
+    NovelDetail(novel: MockData.novels.first!)
 }

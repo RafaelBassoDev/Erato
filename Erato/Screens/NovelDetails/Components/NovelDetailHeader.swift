@@ -43,6 +43,5 @@ struct NovelDetailHeader: View {
 }
 
 #Preview {
-    let novel = Novel(title: "Sword God in a Magical World", author: "Er Gen", description: "Some DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome Description", chapters: [], isCompleted: false)
-    return NovelDetailHeader(novel: novel)
+    NovelDetailHeader(novel: MockData.novels.first!)
 }

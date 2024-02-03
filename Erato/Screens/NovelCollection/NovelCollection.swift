@@ -15,7 +15,9 @@ struct NovelCollection: View {
             ScrollView {
                 LazyVStack(spacing: 15) {
                     ForEach(novels, id: \.self) { novel in
-                        NavigationLink(value: novel) {
+                        NavigationLink {
+                            NovelDetail(novel: novel)
+                        } label: {
                             NovelCollectionCard(novel: novel, maxHeight: proxy.size.height * 0.2)
                         }
                         .padding(.horizontal)
@@ -23,7 +25,6 @@ struct NovelCollection: View {
                     }
                 }
             }
-            
         }
         .navigationTitle("Novels")
         .navigationBarTitleDisplayMode(.inline)
@@ -31,12 +32,7 @@ struct NovelCollection: View {
 }
 
 #Preview {
-    var novels: [Novel] = []
-    for _ in 1...5 {
-        let novel = Novel(title: "Sword God in a Magical World", author: "Er Gen", description: "Some DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome DescriptionSome Description", chapters: [])
-        novels.append(novel)
-    }
-    return NavigationStack {
-        NovelCollection(novels: novels)
+    NavigationStack {
+        NovelCollection(novels: MockData.novels)
     }
 }

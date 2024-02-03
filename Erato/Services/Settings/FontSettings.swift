@@ -8,7 +8,7 @@
 import SwiftUI
 
 final class FontSettings: ObservableObject {
-    @Published private(set) var size: CGFloat = 22
+    @Published private(set) var size: CGFloat = 32
     
     public func setSize(_ newSize: CGFloat) {
         size = newSize

@@ -15,7 +15,7 @@ struct NovelCollectionCard: View {
         HStack(alignment: .top) {
             Rectangle()
                 .fill(Color.red)
-                .frame(maxWidth: maxHeight * 0.7)
+                .frame(maxWidth: maxHeight * 0.7, maxHeight: .infinity)
             
             VStack(alignment: .leading, spacing: 10) {
                 Text(novel.title)
@@ -29,14 +29,9 @@ struct NovelCollectionCard: View {
             .multilineTextAlignment(.leading)
         }
         .frame(maxWidth: .infinity, maxHeight: maxHeight, alignment: .leading)
-        .navigationDestination(for: Novel.self) { novel in
-            Text(novel.title)
-                .navigationTitle(novel.title)
-        }
     }
 }
 
 #Preview {
-    let novel = Novel(title: "Sword God in a Magical World", author: "Er Gen", description: "Lorem ipsum dolor sit amet, amet sit dolor ipsum lorem ipsum dolor sit amet, lorem ipsum dolor sit amet. \nLorem ipsum dolor sit amet! Lorem dolor ipsum amet sit dolor.", chapters: [])
-    return NovelCollectionCard(novel: novel, maxHeight: 150)
+    NovelCollectionCard(novel: MockData.novels.first!, maxHeight: 200)
 }

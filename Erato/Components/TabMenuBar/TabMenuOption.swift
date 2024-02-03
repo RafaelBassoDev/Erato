@@ -32,8 +32,8 @@ extension TabMenuOption {
             if (isSelected) {
                 Rectangle()
                     .fill(.primary)
-                    .frame(width: .infinity, height: 4)
                     .padding(.horizontal)
+                    .frame(maxWidth: .infinity, maxHeight: 4)
             }
         }
     }
