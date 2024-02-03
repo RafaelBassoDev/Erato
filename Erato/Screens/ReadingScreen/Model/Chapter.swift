@@ -11,7 +11,7 @@ class Chapter {
     let id: UUID
     let title: String
     let content: String
-    var isRead: Bool
+    private var isRead: Bool
     
     var next: Chapter?
     
@@ -21,6 +21,11 @@ class Chapter {
         self.content = content
         self.isRead = isRead
         self.next = nextChapter
+    }
+    
+    public func IsRead() {
+        // set on database
+        isRead = true
     }
 }
 

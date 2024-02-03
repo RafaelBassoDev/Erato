@@ -49,6 +49,7 @@ struct ReadingScreen: View {
                     if value.startLocation.x > value.location.x {
                         // left <--X
                         showNextChapter = true
+                        chapter.IsRead()
                     } else if value.startLocation.x < value.location.x {
                         // right X-->
                         dismiss()
