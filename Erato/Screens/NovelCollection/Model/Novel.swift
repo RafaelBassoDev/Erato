@@ -54,8 +54,15 @@ class MockData {
     
     static var multiChapters: [Chapter] = {
         var tmpChapters: [Chapter] = []
+        var lastCh: Chapter? = nil
+        
         for i in 0...100 {
-            tmpChapters.append(Chapter(title: "Chapter \(i)", content: text))
+            let chapter = Chapter(title: "Chapter \(i)", content: text)
+            
+            lastCh?.next = chapter
+            lastCh = chapter
+            
+            tmpChapters.append(chapter)
         }
         return tmpChapters
     }()

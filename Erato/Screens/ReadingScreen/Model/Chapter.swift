@@ -7,17 +7,20 @@
 
 import Foundation
 
-struct Chapter {
+class Chapter {
     let id: UUID
     let title: String
     let content: String
     var isRead: Bool
     
-    init(title: String, content: String, isRead: Bool = false) {
+    var next: Chapter?
+    
+    init(title: String, content: String, isRead: Bool = false, nextChapter: Chapter? = nil) {
         self.id = UUID()
         self.title = title
         self.content = content
         self.isRead = isRead
+        self.next = nextChapter
     }
 }
 

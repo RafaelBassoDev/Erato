@@ -28,6 +28,9 @@ struct NovelDetail: View {
                 NovelDetailChapterList(chapters: novel.chapters)
             }
         }
+        .onAppear {
+            UINavigationBar.setAnimationsEnabled(true)
+        }
     }
 }
 
