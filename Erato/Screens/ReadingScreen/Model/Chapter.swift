@@ -11,7 +11,7 @@ class Chapter {
     let id: UUID
     let title: String
     let content: String
-    private var isRead: Bool
+    private(set) var isRead: Bool
     
     var next: Chapter?
     

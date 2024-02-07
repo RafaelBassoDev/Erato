@@ -26,6 +26,7 @@
 		554048E72B6D5EAC00B22661 /* TabMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048E62B6D5EAC00B22661 /* TabMenuOption.swift */; };
 		554048E92B6D726700B22661 /* NovelDetailDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048E82B6D726700B22661 /* NovelDetailDescription.swift */; };
 		554048EB2B6D72E800B22661 /* NovelDetailChapterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048EA2B6D72E800B22661 /* NovelDetailChapterList.swift */; };
+		55DCF67B2B73B08C00F2E3E8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DCF67A2B73B08C00F2E3E8 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		554048E62B6D5EAC00B22661 /* TabMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuOption.swift; sourceTree = "<group>"; };
 		554048E82B6D726700B22661 /* NovelDetailDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDetailDescription.swift; sourceTree = "<group>"; };
 		554048EA2B6D72E800B22661 /* NovelDetailChapterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDetailChapterList.swift; sourceTree = "<group>"; };
+		55DCF67A2B73B08C00F2E3E8 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		5540488D2B6C090600B22661 /* Erato */ = {
 			isa = PBXGroup;
 			children = (
+				55DCF6792B73B08100F2E3E8 /* Extensions */,
 				554048DC2B6D546300B22661 /* Components */,
 				554048BF2B6C10BE00B22661 /* Services */,
 				554048BE2B6C10B900B22661 /* Screens */,
@@ -275,6 +278,14 @@
 			path = TabMenuBar;
 			sourceTree = "<group>";
 		};
+		55DCF6792B73B08100F2E3E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55DCF67A2B73B08C00F2E3E8 /* View.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -407,6 +418,7 @@
 			files = (
 				554048D42B6C4BA200B22661 /* Novel.swift in Sources */,
 				554048CA2B6C383300B22661 /* Chapter.swift in Sources */,
+				55DCF67B2B73B08C00F2E3E8 /* View.swift in Sources */,
 				554048D12B6C4B9000B22661 /* NovelCollection.swift in Sources */,
 				554048E72B6D5EAC00B22661 /* TabMenuOption.swift in Sources */,
 				554048CD2B6C4A3A00B22661 /* FontSettings.swift in Sources */,
