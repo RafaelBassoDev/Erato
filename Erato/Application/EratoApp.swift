@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct EratoApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     @StateObject var fontSettings = FontSettings()
     
     @State var novels: [Novel] = []
