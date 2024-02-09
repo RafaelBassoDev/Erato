@@ -34,7 +34,6 @@ struct ReadingScreen: View {
             }
             .padding(.horizontal)
         }
-        .toolbar(.hidden, for: .navigationBar)
     }
 }
 
