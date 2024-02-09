@@ -13,13 +13,7 @@ struct ReadingScreen: View {
     
     @Environment(\.dismiss) private var dismiss
     
-    @State private var showNextChapter = false
-    
     let chapter: Chapter
-    
-    init(chapter: Chapter) {
-        self.chapter = chapter
-    }
     
     var body: some View {
         ScrollView {
@@ -38,35 +32,9 @@ struct ReadingScreen: View {
                         )
                     )
             }
-            .padding()
+            .padding(.horizontal)
         }
         .toolbar(.hidden, for: .navigationBar)
-        .gesture(
-            DragGesture(minimumDistance: 100)
-                .onEnded { value in
-                    UINavigationBar.setAnimationsEnabled(true)
-                    
-                    if value.startLocation.x > value.location.x {
-                        // left <--X
-                        showNextChapter = true
-                        chapter.IsRead()
-                    } else if value.startLocation.x < value.location.x {
-                        // right X-->
-                        dismiss()
-                    }
-                }
-        )
-        .navigationDestination(isPresented: $showNextChapter) {
-            if let nextChapter = chapter.next {
-                ReadingScreen(chapter: nextChapter)
-            }
-        }
-        .onAppear {
-            if showNextChapter {
-                UINavigationBar.setAnimationsEnabled(false)
-                dismiss()
-            }
-        }
     }
 }
 

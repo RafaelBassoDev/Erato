@@ -11,6 +11,7 @@
 		5515964B2B73BDDC00462B38 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5515964A2B73BDDC00462B38 /* FirebaseAnalytics */; };
 		5515964D2B73BDDC00462B38 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5515964C2B73BDDC00462B38 /* FirebaseFirestore */; };
 		5515964F2B73BE0800462B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515964E2B73BE0800462B38 /* AppDelegate.swift */; };
+		551596512B73E47100462B38 /* ReadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551596502B73E47100462B38 /* ReadingController.swift */; };
 		5540488F2B6C090600B22661 /* EratoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540488E2B6C090600B22661 /* EratoApp.swift */; };
 		554048952B6C090800B22661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554048942B6C090800B22661 /* Assets.xcassets */; };
 		554048982B6C090800B22661 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554048972B6C090800B22661 /* Preview Assets.xcassets */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		551596472B73B93500462B38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5515964E2B73BE0800462B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		551596502B73E47100462B38 /* ReadingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingController.swift; sourceTree = "<group>"; };
 		5540488B2B6C090600B22661 /* Erato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5540488E2B6C090600B22661 /* EratoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EratoApp.swift; sourceTree = "<group>"; };
 		554048942B6C090800B22661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				554048C82B6C382000B22661 /* Model */,
 				554048C52B6C338B00B22661 /* ReadingScreen.swift */,
+				551596502B73E47100462B38 /* ReadingController.swift */,
 			);
 			path = ReadingScreen;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				554048EB2B6D72E800B22661 /* NovelDetailChapterList.swift in Sources */,
 				554048C62B6C338B00B22661 /* ReadingScreen.swift in Sources */,
 				554048D82B6C5DFD00B22661 /* NovelCollectionCard.swift in Sources */,
+				551596512B73E47100462B38 /* ReadingController.swift in Sources */,
 				5540488F2B6C090600B22661 /* EratoApp.swift in Sources */,
 				554048DE2B6D548E00B22661 /* IconedText.swift in Sources */,
 				554048DB2B6D52D400B22661 /* NovelDetail.swift in Sources */,

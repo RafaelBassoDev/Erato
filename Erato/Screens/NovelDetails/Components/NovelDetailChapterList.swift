@@ -14,7 +14,7 @@ struct NovelDetailChapterList: View {
         ScrollViewReader { proxy in
             List(chapters, id: \.id) { chapter in
                 NavigationLink(chapter.title) {
-                    ReadingScreen(chapter: chapter)
+                    ReadingController(currentChapter: chapter)
                 }
                 .foregroundStyle(chapter.isRead ? .secondary : .primary)
                 .padding(.vertical)
