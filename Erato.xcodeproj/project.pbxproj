@@ -241,17 +241,9 @@
 		554048D52B6C5DE900B22661 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				554048D62B6C5DEF00B22661 /* NovelCollectionCard */,
-			);
-			path = components;
-			sourceTree = "<group>";
-		};
-		554048D62B6C5DEF00B22661 /* NovelCollectionCard */ = {
-			isa = PBXGroup;
-			children = (
 				554048D72B6C5DFD00B22661 /* NovelCollectionCard.swift */,
 			);
-			path = NovelCollectionCard;
+			path = components;
 			sourceTree = "<group>";
 		};
 		554048D92B6D52C700B22661 /* NovelDetails */ = {

@@ -13,16 +13,18 @@ struct Novel {
     let author: String
     let description: String
     let chapters: [Chapter]
+    let tags: [String]
     
     let isCompleted: Bool
     let chapterCount: Int
     
-    init(title: String, author: String, description: String, chapters: [Chapter], isCompleted: Bool = false) {
+    init(title: String, author: String, description: String, chapters: [Chapter], tags: [String] = [], isCompleted: Bool = false) {
         self.id = UUID()
         self.title = title
         self.author = author
         self.description = description
         self.chapters = chapters
+        self.tags = tags
         self.isCompleted = isCompleted
         
         self.chapterCount = chapters.count
@@ -71,18 +73,21 @@ class MockData {
         .init(
             title: "Xian Ni",
             author: "Er Gen",
-            description: "Some description",
-            chapters: multiChapters),
+            description: text,
+            chapters: multiChapters,
+            tags: ["Weak to Strong", "Martial Arts", "Fantasy", "Xianxia"]),
         .init(
             title: "Tales of Demons and Gods",
             author: "Er Gen",
             description: "Some description",
-            chapters: chapters),
+            chapters: chapters,
+            tags: ["Reincarnation", "Pills", "Action"]),
         .init(
             title: "Sword God in a Magical World",
             author: "Er Gen",
-            description: "Some description",
-            chapters: chapters)
+            description: text,
+            chapters: chapters,
+            tags: ["Reincarnation", "Magic", "Action", "Academy", "Transmigration"])
     ]
     
     static let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur vel nunc eget sollicitudin. Pellentesque condimentum velit quis est congue blandit. Cras sed velit ac mi ullamcorper auctor sit amet at est. Integer mauris lorem, congue sit amet volutpat a, finibus vel nisi. Pellentesque laoreet, arcu sit amet sollicitudin hendrerit, enim neque congue tellus, eu accumsan sem ex ut ipsum. Etiam vulputate ex eget tortor consequat lobortis. Nunc dignissim at nibh a sollicitudin. Sed quis pretium augue, sed ullamcorper leo. Donec laoreet in lacus ut accumsan. Donec vel nunc bibendum, pretium enim ac, malesuada augue. Mauris suscipit auctor vehicula. Integer sagittis nunc lectus, non lacinia enim molestie ac.\n\n Mauris vitae leo id lorem accumsan interdum. Duis aliquam, dui non sodales viverra, risus mi volutpat turpis, suscipit tempor nisi tortor volutpat nunc. Mauris nec consequat justo, imperdiet varius felis. Maecenas ullamcorper convallis metus, vel vulputate mi pulvinar vitae. Nunc vitae ipsum feugiat, suscipit orci sed, tempus dui. Sed pharetra eros a enim porta, vitae commodo felis tempor. Etiam ut orci sollicitudin eros faucibus eleifend vel vel tortor. Sed iaculis dolor vel ligula maximus, id finibus neque blandit. Nam eu eleifend lectus.\n\n Mauris vitae leo id lorem accumsan interdum. Duis aliquam, dui non sodales viverra, risus mi volutpat turpis, suscipit tempor nisi tortor volutpat nunc. Mauris nec consequat justo, imperdiet varius felis. Maecenas ullamcorper convallis metus, vel vulputate mi pulvinar vitae. Nunc vitae ipsum feugiat, suscipit orci sed, tempus dui. Sed pharetra eros a enim porta, vitae commodo felis tempor. Etiam ut orci sollicitudin eros faucibus eleifend vel vel tortor. Sed iaculis dolor vel ligula maximus, id finibus neque blandit. Nam eu eleifend lectus.\n\n Mauris vitae leo id lorem accumsan interdum. Duis aliquam, dui non sodales viverra, risus mi volutpat turpis, suscipit tempor nisi tortor volutpat nunc. Mauris nec consequat justo, imperdiet varius felis. Maecenas ullamcorper convallis metus, vel vulputate mi pulvinar vitae. Nunc vitae ipsum feugiat, suscipit orci sed, tempus dui. Sed pharetra eros a enim porta, vitae commodo felis tempor. Etiam ut orci sollicitudin eros faucibus eleifend vel vel tortor. Sed iaculis dolor vel ligula maximus, id finibus neque blandit. Nam eu eleifend lectus."

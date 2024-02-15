@@ -18,7 +18,7 @@ struct NovelDetailChapterList: View {
                 }
                 .foregroundStyle(chapter.isRead ? .secondary : .primary)
                 .padding(.vertical)
-                .id(chapter.title)
+                .id(chapter.id)
             }
             .listStyle(.plain)
         }

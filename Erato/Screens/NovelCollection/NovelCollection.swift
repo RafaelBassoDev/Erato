@@ -11,20 +11,18 @@ struct NovelCollection: View {
     let novels: [Novel]
     
     var body: some View {
-        GeometryReader { proxy in
-            ScrollView {
-                LazyVStack(spacing: 15) {
-                    ForEach(novels, id: \.self) { novel in
-                        NavigationLink {
-                            NovelDetail(novel: novel)
-                        } label: {
-                            NovelCollectionCard(novel: novel, maxHeight: proxy.size.height * 0.2)
-                        }
-                        .padding(.horizontal)
-                        .buttonStyle(.plain)
+        ScrollView {
+            LazyVStack(spacing: 15) {
+                ForEach(novels, id: \.self) { novel in
+                    NavigationLink {
+                        NovelDetail(novel: novel)
+                    } label: {
+                        NovelCollectionCard(novel: novel, cardHeight: 180, showTags: true)
                     }
+                    .buttonStyle(.plain)
                 }
             }
+            .padding(.horizontal)
         }
         .navigationTitle("Novels")
         .navigationBarTitleDisplayMode(.inline)
