@@ -17,7 +17,7 @@ struct NovelCollection: View {
                     NavigationLink {
                         NovelDetail(novel: novel)
                     } label: {
-                        NovelCollectionCard(novel: novel, cardHeight: 180, showTags: true)
+                        NovelCollectionCard(novel: novel, cardHeight: 180)
                     }
                     .buttonStyle(.plain)
                 }
