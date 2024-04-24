@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		551596482B73B93500462B38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 551596472B73B93500462B38 /* GoogleService-Info.plist */; };
-		5515964B2B73BDDC00462B38 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5515964A2B73BDDC00462B38 /* FirebaseAnalytics */; };
-		5515964D2B73BDDC00462B38 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5515964C2B73BDDC00462B38 /* FirebaseFirestore */; };
 		5515964F2B73BE0800462B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515964E2B73BE0800462B38 /* AppDelegate.swift */; };
 		551596512B73E47100462B38 /* ReadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551596502B73E47100462B38 /* ReadingController.swift */; };
 		5540488F2B6C090600B22661 /* EratoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540488E2B6C090600B22661 /* EratoApp.swift */; };
@@ -85,8 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5515964B2B73BDDC00462B38 /* FirebaseAnalytics in Frameworks */,
-				5515964D2B73BDDC00462B38 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +304,6 @@
 			);
 			name = Erato;
 			packageProductDependencies = (
-				5515964A2B73BDDC00462B38 /* FirebaseAnalytics */,
-				5515964C2B73BDDC00462B38 /* FirebaseFirestore */,
 			);
 			productName = Erato;
 			productReference = 5540488B2B6C090600B22661 /* Erato.app */;
@@ -384,7 +378,6 @@
 			);
 			mainGroup = 554048822B6C090600B22661;
 			packageReferences = (
-				551596492B73BDDC00462B38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 5540488C2B6C090600B22661 /* Products */;
 			projectDirPath = "";
@@ -783,30 +776,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		551596492B73BDDC00462B38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.21.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5515964A2B73BDDC00462B38 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 551596492B73BDDC00462B38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		5515964C2B73BDDC00462B38 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 551596492B73BDDC00462B38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 554048832B6C090600B22661 /* Project object */;
 }
