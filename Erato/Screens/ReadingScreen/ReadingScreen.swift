@@ -15,6 +15,8 @@ struct ReadingScreen: View {
     
     let chapter: Chapter
     
+    let delegate: ReadingScreenDelegate?
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
@@ -31,6 +33,23 @@ struct ReadingScreen: View {
                             design: .rounded
                         )
                     )
+                
+                HStack {
+                    IconedButton(systemName: "chevron.left") {
+                        delegate?.didClickPrevious()
+                    }
+                    
+                    IconedButton(systemName: "list.dash") {
+                        delegate?.didClickChapterList()
+                    }
+                    
+                    IconedButton(systemName: "chevron.right") {
+                        delegate?.didClickNext()
+                    }
+                }
+                .tint(.blue)
+                .controlSize(.mini)
+                .padding(.top)
             }
             .padding(.horizontal)
         }
@@ -41,6 +60,6 @@ struct ReadingScreen: View {
     let fontSettings = FontSettings()
     fontSettings.setSize(22)
     
-    return ReadingScreen(chapter: MockData.chapters.first!)
+    return ReadingScreen(chapter: MockData.chapters.first!, delegate: nil)
         .environmentObject(fontSettings)
 }
