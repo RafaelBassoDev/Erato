@@ -11,7 +11,7 @@ struct SettingsSheet<Content>: View where Content: View {
     @EnvironmentObject var fontSettings: FontSettings
     
     @Binding var showSettings: Bool
-    @Binding var opacity: Double
+    @Binding var screenDimOpacity: Double
     
     @State var offset: CGSize = CGSize(width: 0, height: 400)
     let content: () -> Content
@@ -26,15 +26,20 @@ struct SettingsSheet<Content>: View where Content: View {
                 
                 Form {
                     Section("Font") {
-                        Stepper(
-                            value: $fontSettings.size,
-                            in: fontSettings.fontSizeBounds,
-                            step: 1
-                        ) {
-                            Text("Size: \(Int(fontSettings.size))")
+                        VStack(alignment: .leading) {
+                            Text("Size:")
+                                .bold()
+                            
+                            Stepper(
+                                value: $fontSettings.size,
+                                in: fontSettings.fontSizeBounds,
+                                step: 1
+                            ) {
+                                Text("\(Int(fontSettings.size))")
+                            }
                         }
                         
-                        Picker("Font Family", selection: $fontSettings.family) {
+                        Picker("Family", selection: $fontSettings.family) {
                             ForEach(FontFamily.allCases) { family in
                                 Text(family.rawValue)
                             }
@@ -43,7 +48,10 @@ struct SettingsSheet<Content>: View where Content: View {
                     }
                     
                     Section("Text") {
-                        Section("Character Spacing:") {
+                        VStack(alignment: .leading) {
+                            Text("Character Spacing:")
+                                .bold()
+                             
                             Stepper(
                                 value: $fontSettings.characterSpacing,
                                 in: fontSettings.characterSpacingBounds,
@@ -53,7 +61,10 @@ struct SettingsSheet<Content>: View where Content: View {
                             }
                         }
                         
-                        Section("Line Spacing:") {
+                        VStack(alignment: .leading) {
+                            Text("Line Spacing:")
+                                .bold()
+                            
                             Stepper(
                                 value: $fontSettings.lineSpacing,
                                 in: fontSettings.lineSpacingBounds,
@@ -64,11 +75,11 @@ struct SettingsSheet<Content>: View where Content: View {
                         }
                     }
                     
-                    Section("Luminosity") {
+                    Section("Screen Dim") {
                         Slider(
-                            value: $opacity,
+                            value: $screenDimOpacity,
                             in: 0...1,
-                            step: 0.1
+                            step: 0.01
                         )
                     }
                 }
@@ -104,7 +115,7 @@ struct SettingsSheet_Preview: PreviewProvider {
         @State var opacity = 0.0
         
         var body: some View {
-            SettingsSheet(showSettings: $show, opacity: $opacity) {
+            SettingsSheet(showSettings: $show, screenDimOpacity: $opacity) {
                 Toggle(isOn: $show) {
                     Text("show options")
                 }
