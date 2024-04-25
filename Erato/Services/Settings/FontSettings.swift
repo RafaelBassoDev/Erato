@@ -8,38 +8,36 @@
 import SwiftUI
 
 final class FontSettings: ObservableObject {
-    public enum FontFamily: String {
-        case arial = "ArialMT",
-             charter = "Charter-Roman",
-             helvetica = "Helvetica",
-             georgia = "Georgia",
-             palatino = "Palatino-Roman",
-             verdana = "Verdana",
-             timesNewRoman = "TimesNewRomanPSMT"
-    }
-    
-    @AppStorage("fontSize") private(set) var size: Double = 22
-    @AppStorage("fontFamily") private(set) var family: FontFamily = .verdana
-    @AppStorage("fontCharacterSpacing") private(set) var characterSpacing: Double = 0
-    @AppStorage("fontLineSpacing") private(set) var lineSpacing: Double = 0
+    @AppStorage("fontSize") var size: Double = 22
+    @AppStorage("fontFamily") var family: FontFamily = .verdana
+    @AppStorage("fontCharacterSpacing") var characterSpacing: Double = 0
+    @AppStorage("fontLineSpacing") var lineSpacing: Double = 0
 }
 
 extension FontSettings {
-    public func setSize(_ newValue: Double) {
-        size = newValue
+    public var fontSizeBounds: ClosedRange<Double> {
+        return 8...44
     }
     
-    public func setFamily(_ newValue: FontFamily) {
-        family = newValue
+    public var characterSpacingBounds: ClosedRange<Double> {
+        return 0...20
     }
     
-    public func setCharacterSpacing(_ newValue: Double) {
-        characterSpacing = newValue
+    public var lineSpacingBounds: ClosedRange<Double> {
+        return 0...20
     }
+}
+
+public enum FontFamily: String, CaseIterable, Identifiable {
+    case arial = "ArialMT",
+         charter = "Charter-Roman",
+         helvetica = "Helvetica",
+         georgia = "Georgia",
+         palatino = "Palatino-Roman",
+         verdana = "Verdana",
+         timesNewRoman = "TimesNewRomanPSMT"
     
-    public func setLineSpacing(_ newValue: Double) {
-        lineSpacing = newValue
-    }
+    public var id: Self { self }
 }
 
 extension View {
