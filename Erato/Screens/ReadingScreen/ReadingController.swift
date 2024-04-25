@@ -8,8 +8,7 @@
 import SwiftUI
 import Foundation
 
-struct ReadingController: View {
-    
+struct ReadingController: View, ReadingScreenDelegate {
     @EnvironmentObject var fontSettings: FontSettings
     
     @Environment(\.dismiss) private var dismiss
@@ -20,56 +19,37 @@ struct ReadingController: View {
     @State var count = 0
     
     var body: some View {
-        VStack(spacing: 0) {
-            HStack {
-                Button {
-                    dismiss()
-                } label: {
-                    Text("dismiss")
-                }
-                
-                Spacer()
-                
-                Button {
-                    
-                } label: {
-                    Text("settings")
-                }
-            }
-            .padding(.horizontal)
-//            Button {
-//                print("settings")
-//                
-//            } label: {
-//                Text("Settings")
-//            }
-//            .padding(.horizontal)
-//            .frame(maxWidth: .infinity, alignment: .trailing)
-            
-            ReadingScreen(chapter: currentChapter)
-        }
-        .toolbar(.hidden, for: .navigationBar)
-        .gesture(
-            DragGesture(minimumDistance: 100)
-                .onEnded { value in
-                    UINavigationBar.setAnimationsEnabled(true)
-                    
-                    if value.startLocation.x > value.location.x {
-                        // left <--X
-                        currentChapter.IsRead()
-                        
-                        Task(priority: .userInitiated) {
-                            if let nextChapter = try? await loadNextChapter() {
-                                currentChapter = nextChapter
-                            }
-                        }
-                    } else if value.startLocation.x < value.location.x {
-                        // right X-->
-                        dismiss()
+        ReadingScreen(chapter: currentChapter, delegate: self)
+            .toolbar(.hidden, for: .navigationBar)
+            .gesture(
+                TapGesture(count: 3)
+                    .onEnded {
+                        print("three taps ended")
                     }
-                }
-        )
-        .loading(isLoading)
+            )
+            .loading(isLoading)
+    }
+    
+    func didClickPrevious() {
+        Task(priority: .userInitiated) {
+            if let nextChapter = try? await loadPreviousChapter() {
+                currentChapter = nextChapter
+            }
+        }
+    }
+    
+    func didClickNext() {
+        currentChapter.IsRead()
+        
+        Task(priority: .userInitiated) {
+            if let nextChapter = try? await loadNextChapter() {
+                currentChapter = nextChapter
+            }
+        }
+    }
+    
+    func didClickChapterList() {
+        dismiss()
     }
 }
 
@@ -77,17 +57,37 @@ extension ReadingController {
     private func loadNextChapter() async throws -> Chapter? {
         isLoading = true
         
-        let nextChapter = await fetchNextChapter()
-           
-        isLoading = false
+        defer {
+            isLoading = false
+        }
         
-        return nextChapter
+        count += 1
+        
+        try await Task.sleep(nanoseconds: 3_000_000_000)
+        
+        guard count < MockData.chapters.count else {
+            return nil
+        }
+        
+        return MockData.chapters[count]
     }
     
-    private func fetchNextChapter() async -> Chapter? {
-        count += 1
-        let nextChapter = MockData.chapters[count]
-        return nextChapter
+    private func loadPreviousChapter() async throws -> Chapter? {
+        isLoading = true
+        
+        defer {
+            isLoading = false
+        }
+        
+        count -= 1
+        
+        try await Task.sleep(nanoseconds: 3_000_000_000)
+        
+        guard count < MockData.chapters.count else {
+            return nil
+        }
+        
+        return MockData.chapters[count]
     }
 }
 
