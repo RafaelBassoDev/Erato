@@ -16,15 +16,15 @@ final class FontSettings: ObservableObject {
 
 extension FontSettings {
     public var fontSizeBounds: ClosedRange<Double> {
-        return 8...44
+        return 4...80
     }
     
     public var characterSpacingBounds: ClosedRange<Double> {
-        return 0...20
+        return 0...10
     }
     
     public var lineSpacingBounds: ClosedRange<Double> {
-        return 0...20
+        return 0...40
     }
 }
 

@@ -55,9 +55,9 @@ struct SettingsSheet<Content>: View where Content: View {
                             Stepper(
                                 value: $fontSettings.characterSpacing,
                                 in: fontSettings.characterSpacingBounds,
-                                step: 1
+                                step: 0.2
                             ) {
-                                Text("\(Int(fontSettings.characterSpacing))")
+                                Text((String(format: "%.1f", fontSettings.characterSpacing)))
                             }
                         }
                         
@@ -68,9 +68,9 @@ struct SettingsSheet<Content>: View where Content: View {
                             Stepper(
                                 value: $fontSettings.lineSpacing,
                                 in: fontSettings.lineSpacingBounds,
-                                step: 1
+                                step: 0.5
                             ) {
-                                Text("\(Int(fontSettings.lineSpacing))")
+                                Text(String(format: "%.1f", fontSettings.lineSpacing))
                             }
                         }
                     }
