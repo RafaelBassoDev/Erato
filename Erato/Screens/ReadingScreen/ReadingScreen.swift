@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ReadingScreen: View {
-    
     @EnvironmentObject var fontSettings: FontSettings
     
     @Environment(\.dismiss) private var dismiss
@@ -28,13 +27,7 @@ struct ReadingScreen: View {
                         .id("title")
                     
                     Text(chapter.content)
-                        .font(
-                            .system(
-                                size: fontSettings.size,
-                                weight: .regular,
-                                design: .rounded
-                            )
-                        )
+                        .applyingFontSettings(fontSettings)
                     
                     HStack {
                         IconedButton(systemName: "chevron.left") {
@@ -63,7 +56,6 @@ struct ReadingScreen: View {
 
 #Preview {    
     let fontSettings = FontSettings()
-    fontSettings.setSize(22)
     
     return ReadingScreen(chapter: MockData.chapters.first!, delegate: nil)
         .environmentObject(fontSettings)
