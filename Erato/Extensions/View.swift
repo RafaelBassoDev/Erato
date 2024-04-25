@@ -9,36 +9,67 @@ import SwiftUI
 
 extension View {
     @ViewBuilder
-    func loading(_ isLoading: Bool, label: String = "", scale: CGFloat = 2.0) -> some View {
-        if isLoading {
-            ZStack {
-                ProgressView(label)
-                    .scaleEffect(scale, anchor: .center)
-                    .progressViewStyle(.circular)
-                
+    func loading(_ isLoading: Bool, showBackground: Bool = true, label: String? = nil) -> some View {
+        GeometryReader { proxy in
+            ZStack(alignment: .center) {
                 self
-                    .disabled(isLoading)
-                    .foregroundStyle(.foreground.opacity(0.1))
+                    .blur(radius: isLoading ? 2 : 0)
+                
+                if isLoading {
+                    VStack(spacing: 20) {
+                        ProgressView()
+                            .controlSize(.large)
+                        
+                        if label != nil {
+                            Text(label!)
+                                .font(.system(size: 200))
+                                .lineLimit(2)
+                                .multilineTextAlignment(.center)
+                                .minimumScaleFactor(0.01)
+                        }
+                    }
+                    .padding(.horizontal, label != nil ? 10 : nil)
+                    .padding(.vertical)
+                    .frame(
+                        maxWidth: label != nil ? proxy.size.width/3 : nil,
+                        alignment: .center
+                    )
+                    .background {
+                        if showBackground {
+                            RoundedRectangle(cornerRadius: 12.0)
+                                .foregroundStyle(.background)
+                                .opacity(0.9)
+                        }
+                    }
+                }
             }
-        } else {
-            self
         }
     }
+}
 
-    @ViewBuilder
-    func loading(_ isLoading: Bool, progress: CGFloat , label: String = "", scale: CGFloat = 0.9) -> some View {
-        if isLoading {
-            ZStack {
-                ProgressView(label, value: progress)
-                    .scaleEffect(scale, anchor: .center)
-                    .progressViewStyle(.linear)
+struct SomeView_Preview: PreviewProvider {
+    struct ContainerView: View {
+        @State var isLoading = true
+        
+        var body: some View {
+            VStack {
+                VStack {
+                    Toggle(isOn: $isLoading, label: {
+                        Text("isLoading")
+                    })
+                }
+                .padding()
                 
-                self
-                    .disabled(isLoading)
-                    .foregroundStyle(.foreground.opacity(0.1))
+                Text("Salve!Salve!Salve!Salve!Salve!Salve!Salve!Salve!Salve!Salve!Salve!Salve!Salve!Salve!Salve!Salve!Salve!Salve!")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .font(.system(size: 40))
+                    .background(.purple)
+                    .loading(isLoading, label: "Loading...")
             }
-        } else {
-            self
         }
+    }
+    
+    static var previews: some View {
+        ContainerView()
     }
 }
