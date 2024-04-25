@@ -18,40 +18,45 @@ struct ReadingScreen: View {
     let delegate: ReadingScreenDelegate?
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                Text(chapter.title)
-                    .font(.title)
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Text(chapter.content)
-                    .font(
-                        .system(
-                            size: fontSettings.size,
-                            weight: .regular,
-                            design: .rounded
+        ScrollViewReader { proxy in
+            ScrollView {
+                VStack(spacing: 20) {
+                    Text(chapter.title)
+                        .font(.title)
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .id("title")
+                    
+                    Text(chapter.content)
+                        .font(
+                            .system(
+                                size: fontSettings.size,
+                                weight: .regular,
+                                design: .rounded
+                            )
                         )
-                    )
-                
-                HStack {
-                    IconedButton(systemName: "chevron.left") {
-                        delegate?.didClickPrevious()
-                    }
                     
-                    IconedButton(systemName: "list.dash") {
-                        delegate?.didClickChapterList()
+                    HStack {
+                        IconedButton(systemName: "chevron.left") {
+                            withAnimation { proxy.scrollTo("title") }
+                            delegate?.didClickPrevious()
+                        }
+                        
+                        IconedButton(systemName: "list.dash") {
+                            delegate?.didClickChapterList()
+                        }
+                        
+                        IconedButton(systemName: "chevron.right") {
+                            withAnimation { proxy.scrollTo("title") }
+                            delegate?.didClickNext()
+                        }
                     }
-                    
-                    IconedButton(systemName: "chevron.right") {
-                        delegate?.didClickNext()
-                    }
+                    .tint(.blue)
+                    .controlSize(.mini)
+                    .padding(.top)
                 }
-                .tint(.blue)
-                .controlSize(.mini)
-                .padding(.top)
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
         }
     }
 }
