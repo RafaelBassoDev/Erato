@@ -32,6 +32,7 @@
 		55DCF67B2B73B08C00F2E3E8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DCF67A2B73B08C00F2E3E8 /* View.swift */; };
 		55F198692BD94AF200FF02A4 /* IconedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F198682BD94AF200FF02A4 /* IconedButton.swift */; };
 		55F1986B2BD95AA900FF02A4 /* ReadingScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F1986A2BD95AA900FF02A4 /* ReadingScreenDelegate.swift */; };
+		55FA71122BDAA8BC00787D18 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA71112BDAA8BC00787D18 /* SettingsSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		55DCF67A2B73B08C00F2E3E8 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		55F198682BD94AF200FF02A4 /* IconedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconedButton.swift; sourceTree = "<group>"; };
 		55F1986A2BD95AA900FF02A4 /* ReadingScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingScreenDelegate.swift; sourceTree = "<group>"; };
+		55FA71112BDAA8BC00787D18 /* SettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 		554048DC2B6D546300B22661 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				55FA71102BDAA87000787D18 /* Settings */,
 				554048E52B6D5E9A00B22661 /* TabMenuBar */,
 				554048DD2B6D548E00B22661 /* IconedText.swift */,
 				55F198682BD94AF200FF02A4 /* IconedButton.swift */,
@@ -291,6 +294,14 @@
 				55DCF67A2B73B08C00F2E3E8 /* View.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		55FA71102BDAA87000787D18 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				55FA71112BDAA8BC00787D18 /* SettingsSheet.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +443,7 @@
 				554048CA2B6C383300B22661 /* Chapter.swift in Sources */,
 				55DCF67B2B73B08C00F2E3E8 /* View.swift in Sources */,
 				55F198692BD94AF200FF02A4 /* IconedButton.swift in Sources */,
+				55FA71122BDAA8BC00787D18 /* SettingsSheet.swift in Sources */,
 				554048D12B6C4B9000B22661 /* NovelCollection.swift in Sources */,
 				554048E72B6D5EAC00B22661 /* TabMenuOption.swift in Sources */,
 				554048CD2B6C4A3A00B22661 /* FontSettings.swift in Sources */,
