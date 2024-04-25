@@ -7,20 +7,47 @@
 
 import SwiftUI
 
-extension View {
-    @ViewBuilder
-    func settingsSheet(_ show: Bool) -> some View {
+struct SettingsSheet<Content>: View where Content: View {
+    @State var offset: CGSize = CGSize(width: 0, height: 0)
+    @Binding var showSettings: Bool
+    let content: () -> Content
+    
+    var body: some View {
         GeometryReader { proxy in
             ZStack(alignment: .bottom) {
-                self
-                
+                content()
+                    .onTapGesture {
+                        showSettings = false
+                    }
+
                 HStack {
-                    Text("Opa")
+                    Button {
+                    } label: {
+                        Text("A")
+                            .font(.system(size: 20))
+                            .bold()
+                    }
+                    .buttonStyle(.plain)
                     
-                    Text("Opa")
+                    Button {
+                    } label: {
+                        Text("A")
+                            .font(.system(size: 30))
+                            .bold()
+                    }
+                    .buttonStyle(.plain)
                 }
-                .frame(maxWidth: .infinity, maxHeight: proxy.size.height*0.3)
+                .frame(maxWidth: .infinity, maxHeight: proxy.size.height*0.2)
                 .background(.red)
+                .animation(.snappy, value: offset)
+                .offset(offset)
+            }
+            .onChange(of: showSettings) {
+                if showSettings {
+                    offset = .zero
+                } else {
+                    offset = CGSize(width: 0, height: proxy.size.height*0.25)
+                }
             }
         }
     }
@@ -31,53 +58,17 @@ struct SettingsSheet_Preview: PreviewProvider {
         @State var show = true
         
         var body: some View {
-            Rectangle()
-                .foregroundStyle(.purple)
-                .settingsSheet(show)
+            SettingsSheet(showSettings: $show) {
+                Toggle(isOn: $show) {
+                    Text("show options")
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(.purple)
+            }
         }
     }
     
     static var previews: some View {
         ContainerView()
-    }
-}
-
-extension View {
-    @ViewBuilder
-    func teste(_ isLoading: Bool, showBackground: Bool = true, label: String? = nil) -> some View {
-        GeometryReader { proxy in
-            ZStack(alignment: .center) {
-                self
-                    .blur(radius: isLoading ? 2 : 0)
-                
-                if isLoading {
-                    VStack(spacing: 20) {
-                        ProgressView()
-                            .controlSize(.large)
-                        
-                        if label != nil {
-                            Text(label!)
-                                .font(.system(size: 200))
-                                .lineLimit(2)
-                                .multilineTextAlignment(.center)
-                                .minimumScaleFactor(0.01)
-                        }
-                    }
-                    .padding(.horizontal, label != nil ? 10 : nil)
-                    .padding(.vertical)
-                    .frame(
-                        maxWidth: label != nil ? proxy.size.width/3 : nil,
-                        alignment: .center
-                    )
-                    .background {
-                        if showBackground {
-                            RoundedRectangle(cornerRadius: 12.0)
-                                .foregroundStyle(.background)
-                                .opacity(0.9)
-                        }
-                    }
-                }
-            }
-        }
     }
 }
