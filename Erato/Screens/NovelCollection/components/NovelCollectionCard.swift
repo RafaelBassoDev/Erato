@@ -12,17 +12,17 @@ struct NovelCollectionCard: View {
     let cardHeight: CGFloat
     let showTags: Bool
     
-    init(novel: Novel, cardHeight: CGFloat, showTags: Bool = false) {
+    init(novel: Novel, cardHeight: CGFloat, showTags: Bool = true) {
         self.novel = novel
         self.cardHeight = cardHeight
         self.showTags = showTags
     }
         
     var body: some View {
-        HStack(alignment: .center, spacing: 0) {
+        HStack(alignment: .center) {
             Rectangle()
                 .fill(Color.red)
-                .frame(width: 150, height: cardHeight)
+                .frame(width: 140, height: 195)
             
             VStack(alignment: .leading, spacing: 10) {
                 Group {
@@ -36,7 +36,7 @@ struct NovelCollectionCard: View {
                 .fontWidth(.condensed)
                 
                 if showTags {
-                    Text(novel.tags.joined(separator: ","))
+                    Text(novel.tags.joined(separator: ", "))
                         .font(.subheadline)
                         .fontWeight(.medium)
                         .foregroundStyle(.primary)
@@ -49,12 +49,11 @@ struct NovelCollectionCard: View {
                         )
                 }
             }
-            .padding()
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(maxWidth: .infinity, minHeight: cardHeight, alignment: .leading)
     }
 }
 
 #Preview {
-    NovelCollectionCard(novel: MockData.novels[2], cardHeight: 200, showTags: false)
+    NovelCollectionCard(novel: MockData.novels[2], cardHeight: 200)
 }
