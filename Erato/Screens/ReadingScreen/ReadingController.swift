@@ -10,24 +10,29 @@ import Foundation
 
 struct ReadingController: View, ReadingScreenDelegate {
     @EnvironmentObject var fontSettings: FontSettings
-    
     @Environment(\.dismiss) private var dismiss
     
     @State var currentChapter: Chapter
-    @State var isLoading = false
+    @State var screenDimOpacity: Double = 0
     
     @State var count = 0
     
+    @State var isLoading = false
+    @State var showSettings = false
+    
     var body: some View {
-        ReadingScreen(chapter: currentChapter, delegate: self)
-            .toolbar(.hidden, for: .navigationBar)
-            .gesture(
-                TapGesture(count: 3)
-                    .onEnded {
-                        print("three taps ended")
-                    }
-            )
-            .loading(isLoading)
+        SettingsSheet(showSettings: $showSettings, screenDimOpacity: $screenDimOpacity) {
+            ReadingScreen(chapter: currentChapter, delegate: self)
+                .overlay(.black.opacity(screenDimOpacity))
+                .gesture(
+                    TapGesture(count: 3)
+                        .onEnded {
+                            showSettings = true
+                        }
+                )
+        }
+        .toolbar(.hidden, for: .navigationBar)
+        .loading(isLoading)
     }
     
     func didClickPrevious() {
