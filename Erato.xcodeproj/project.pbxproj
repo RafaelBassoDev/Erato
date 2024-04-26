@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550E17D02BDBD12200B4A308 /* battle_through_the_heavens.json in Resources */ = {isa = PBXBuildFile; fileRef = 550E17CF2BDBD12200B4A308 /* battle_through_the_heavens.json */; };
 		551596482B73B93500462B38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 551596472B73B93500462B38 /* GoogleService-Info.plist */; };
 		5515964F2B73BE0800462B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515964E2B73BE0800462B38 /* AppDelegate.swift */; };
 		551596512B73E47100462B38 /* ReadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551596502B73E47100462B38 /* ReadingController.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		550E17CF2BDBD12200B4A308 /* battle_through_the_heavens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = battle_through_the_heavens.json; sourceTree = "<group>"; };
 		551596472B73B93500462B38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5515964E2B73BE0800462B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		551596502B73E47100462B38 /* ReadingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550E17CE2BDBD05E00B4A308 /* AppAssets */ = {
+			isa = PBXGroup;
+			children = (
+				550E17CF2BDBD12200B4A308 /* battle_through_the_heavens.json */,
+			);
+			path = AppAssets;
+			sourceTree = "<group>";
+		};
 		554048822B6C090600B22661 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 		554048BD2B6C10AC00B22661 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				550E17CE2BDBD05E00B4A308 /* AppAssets */,
 				5540488E2B6C090600B22661 /* EratoApp.swift */,
 				5515964E2B73BE0800462B38 /* AppDelegate.swift */,
 				554048942B6C090800B22661 /* Assets.xcassets */,
@@ -412,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550E17D02BDBD12200B4A308 /* battle_through_the_heavens.json in Resources */,
 				554048982B6C090800B22661 /* Preview Assets.xcassets in Resources */,
 				554048952B6C090800B22661 /* Assets.xcassets in Resources */,
 				551596482B73B93500462B38 /* GoogleService-Info.plist in Resources */,
