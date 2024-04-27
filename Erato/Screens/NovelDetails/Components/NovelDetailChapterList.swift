@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct NovelDetailChapterList: View {
+    @EnvironmentObject var novelCoordinator: NovelCoordinator
+    
+    @State var lastChapter: Chapter? = nil
+    
     let chapters: [Chapter]
     
     var body: some View {
@@ -18,8 +22,17 @@ struct NovelDetailChapterList: View {
                 }
                 .padding(.vertical)
                 .id(chapter.number)
+//                .foregroundStyle(lastChapter != nil && (lastChapter?.number == chapter.number) ? .secondary : .primary)
             }
             .listStyle(.plain)
+            .onAppear {
+                if let lastChapterNumber = lastChapter?.number {
+                    proxy.scrollTo(lastChapterNumber)
+                }
+            }
+        }
+        .task {
+            lastChapter = await novelCoordinator.getLastReadChapter()
         }
     }
 }

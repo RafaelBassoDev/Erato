@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NovelDetail: View {
+    @EnvironmentObject var novelCoordinator: NovelCoordinator
+    
     @State var currentSubMenu: String = "Description"
     
     let novel: Novel
@@ -29,7 +31,7 @@ struct NovelDetail: View {
             }
         }
         .onAppear {
-            UINavigationBar.setAnimationsEnabled(true)
+            novelCoordinator.setCurrentNovel(novel)
         }
     }
 }

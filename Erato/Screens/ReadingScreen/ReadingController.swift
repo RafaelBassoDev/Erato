@@ -10,6 +10,7 @@ import Foundation
 
 struct ReadingController: View, ReadingScreenDelegate {
     @EnvironmentObject var fontSettings: FontSettings
+    @EnvironmentObject var novelCoordinator: NovelCoordinator
     @Environment(\.dismiss) private var dismiss
     
     @State var currentChapter: Chapter
@@ -30,64 +31,36 @@ struct ReadingController: View, ReadingScreenDelegate {
         }
         .toolbar(.hidden, for: .navigationBar)
         .loading(isLoading)
+        .onAppear {
+            novelCoordinator.setCurrentChapter(currentChapter)
+        }
+        .onChange(of: currentChapter) {
+            novelCoordinator.setCurrentChapter(currentChapter)
+        }
     }
     
     func didClickPrevious() {
         Task(priority: .userInitiated) {
-            if let nextChapter = try? await loadPreviousChapter() {
+            isLoading = true
+            if let nextChapter = await novelCoordinator.getPreviousChapter() {
                 currentChapter = nextChapter
             }
+            isLoading = false
         }
     }
     
     func didClickNext() {
         Task(priority: .userInitiated) {
-            if let nextChapter = try? await loadNextChapter() {
+            isLoading = true
+            if let nextChapter = await novelCoordinator.getNextChapter() {
                 currentChapter = nextChapter
             }
+            isLoading = false
         }
     }
     
     func didClickChapterList() {
         dismiss()
-    }
-}
-
-extension ReadingController {
-    private func loadNextChapter() async throws -> Chapter? {
-        isLoading = true
-        
-        defer {
-            isLoading = false
-        }
-        
-//        try await Task.sleep(nanoseconds: 3_000_000_000)
-        
-        let nextChapterNumber = currentChapter.number + 1
-        
-        guard nextChapterNumber <= MockData.chapters.count else {
-            return nil
-        }
-        
-        return MockData.chapters[nextChapterNumber-1]
-    }
-    
-    private func loadPreviousChapter() async throws -> Chapter? {
-        isLoading = true
-        
-        defer {
-            isLoading = false
-        }
-        
-//        try await Task.sleep(nanoseconds: 3_000_000_000)
-        
-        let nextChapterNumber = currentChapter.number - 1
-        
-        guard nextChapterNumber >= 1 else {
-            return nil
-        }
-        
-        return MockData.chapters[nextChapterNumber-1]
     }
 }
 

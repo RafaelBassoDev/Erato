@@ -12,6 +12,7 @@ struct EratoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     @StateObject var fontSettings = FontSettings()
+    @StateObject var novelCoordinator = NovelCoordinator(storage: LocalNovelStorage())
     
     @State var novels: [Novel] = []
     
@@ -21,8 +22,9 @@ struct EratoApp: App {
                 NovelCollection(novels: novels)
             }
             .environmentObject(fontSettings)
-            .onAppear {
-                novels = MockData.novels;
+            .environmentObject(novelCoordinator)
+            .task {
+                novels = await novelCoordinator.fetchNovels()
             }
         }
     }
