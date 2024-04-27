@@ -8,8 +8,6 @@
 import Foundation
 
 struct Novel: Decodable {
-    let id: UUID
-    
     let title: String
     let author: String
     let description: String
@@ -22,7 +20,6 @@ struct Novel: Decodable {
     let isCompleted: Bool
     
     init(title: String, author: String, description: String, tags: [String] = [], chapters: [Chapter], isCompleted: Bool = false, coverUrl: String? = nil) {
-        self.id = UUID()
         self.title = title
         self.author = author
         self.description = description
@@ -36,11 +33,11 @@ struct Novel: Decodable {
 
 extension Novel: Hashable {
     func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
+        hasher.combine(title)
     }
     
     static func == (lhs: Novel, rhs: Novel) -> Bool {
-        lhs.id == rhs.id
+        lhs.title == rhs.title
     }
 }
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		550E17D02BDBD12200B4A308 /* battle_through_the_heavens.json in Resources */ = {isa = PBXBuildFile; fileRef = 550E17CF2BDBD12200B4A308 /* battle_through_the_heavens.json */; };
 		550E17D22BDD3FB500B4A308 /* NovelStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E17D12BDD3FB500B4A308 /* NovelStorage.swift */; };
+		550E17D52BDD4C8200B4A308 /* NovelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E17D42BDD4C8200B4A308 /* NovelCoordinator.swift */; };
+		550E17D82BDD4CA800B4A308 /* LocalNovelStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E17D72BDD4CA800B4A308 /* LocalNovelStorage.swift */; };
 		551596482B73B93500462B38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 551596472B73B93500462B38 /* GoogleService-Info.plist */; };
 		5515964F2B73BE0800462B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515964E2B73BE0800462B38 /* AppDelegate.swift */; };
 		551596512B73E47100462B38 /* ReadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551596502B73E47100462B38 /* ReadingController.swift */; };
@@ -57,6 +59,8 @@
 /* Begin PBXFileReference section */
 		550E17CF2BDBD12200B4A308 /* battle_through_the_heavens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = battle_through_the_heavens.json; sourceTree = "<group>"; };
 		550E17D12BDD3FB500B4A308 /* NovelStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelStorage.swift; sourceTree = "<group>"; };
+		550E17D42BDD4C8200B4A308 /* NovelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelCoordinator.swift; sourceTree = "<group>"; };
+		550E17D72BDD4CA800B4A308 /* LocalNovelStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNovelStorage.swift; sourceTree = "<group>"; };
 		551596472B73B93500462B38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5515964E2B73BE0800462B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		551596502B73E47100462B38 /* ReadingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,24 @@
 				550E17CF2BDBD12200B4A308 /* battle_through_the_heavens.json */,
 			);
 			path = AppAssets;
+			sourceTree = "<group>";
+		};
+		550E17D32BDD4C6F00B4A308 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				550E17D62BDD4C9C00B4A308 /* Implementation */,
+				550E17D12BDD3FB500B4A308 /* NovelStorage.swift */,
+				550E17D42BDD4C8200B4A308 /* NovelCoordinator.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		550E17D62BDD4C9C00B4A308 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				550E17D72BDD4CA800B4A308 /* LocalNovelStorage.swift */,
+			);
+			path = Implementation;
 			sourceTree = "<group>";
 		};
 		554048822B6C090600B22661 = {
@@ -204,8 +226,8 @@
 		554048BF2B6C10BE00B22661 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				550E17D32BDD4C6F00B4A308 /* Storage */,
 				554048CB2B6C4A2B00B22661 /* Settings */,
-				550E17D12BDD3FB500B4A308 /* NovelStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -470,11 +492,13 @@
 				554048C62B6C338B00B22661 /* ReadingScreen.swift in Sources */,
 				554048D82B6C5DFD00B22661 /* NovelCollectionCard.swift in Sources */,
 				551596512B73E47100462B38 /* ReadingController.swift in Sources */,
+				550E17D82BDD4CA800B4A308 /* LocalNovelStorage.swift in Sources */,
 				5540488F2B6C090600B22661 /* EratoApp.swift in Sources */,
 				554048DE2B6D548E00B22661 /* IconedText.swift in Sources */,
 				554048DB2B6D52D400B22661 /* NovelDetail.swift in Sources */,
 				554048E42B6D5E1F00B22661 /* TabMenuBar.swift in Sources */,
 				55F1986B2BD95AA900FF02A4 /* ReadingScreenDelegate.swift in Sources */,
+				550E17D52BDD4C8200B4A308 /* NovelCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
