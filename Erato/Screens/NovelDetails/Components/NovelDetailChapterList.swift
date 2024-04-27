@@ -12,13 +12,12 @@ struct NovelDetailChapterList: View {
     
     var body: some View {
         ScrollViewReader { proxy in
-            List(chapters, id: \.id) { chapter in
+            List(chapters, id: \.number) { chapter in
                 NavigationLink(chapter.title) {
                     ReadingController(currentChapter: chapter)
                 }
-                .foregroundStyle(chapter.isRead ? .secondary : .primary)
                 .padding(.vertical)
-                .id(chapter.id)
+                .id(chapter.number)
             }
             .listStyle(.plain)
         }
@@ -26,7 +25,10 @@ struct NovelDetailChapterList: View {
 }
 
 #Preview {
-    NavigationStack {
+    let fontSettings = FontSettings()
+    
+    return NavigationStack {
         NovelDetailChapterList(chapters: MockData.chapters)
     }
+    .environmentObject(fontSettings)
 }

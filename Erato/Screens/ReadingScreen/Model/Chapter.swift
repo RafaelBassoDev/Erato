@@ -8,33 +8,23 @@
 import Foundation
 
 class Chapter {
-    let id: UUID
+    let number: Int
     let title: String
     let content: String
-    private(set) var isRead: Bool
     
-    var next: Chapter?
-    
-    init(title: String, content: String, isRead: Bool = false, nextChapter: Chapter? = nil) {
-        self.id = UUID()
+    init(number: Int, title: String, content: String) {
+        self.number = number
         self.title = title
         self.content = content
-        self.isRead = isRead
-        self.next = nextChapter
-    }
-    
-    public func IsRead() {
-        // set on database
-        isRead = true
     }
 }
 
 extension Chapter: Hashable {
     func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
+        hasher.combine(number)
     }
     
     static func == (lhs: Chapter, rhs: Chapter) -> Bool {
-        lhs.id == rhs.id
+        lhs.number == rhs.number
     }
 }
