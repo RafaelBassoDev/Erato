@@ -16,6 +16,7 @@ struct NovelCollection: View {
                 ForEach(novels, id: \.self) { novel in
                     NavigationLink {
                         NovelDetail(novel: novel)
+                            .navigationBarTitleDisplayMode(.inline)
                     } label: {
                         NovelCollectionCard(novel: novel, cardHeight: 180)
                     }
@@ -23,9 +24,10 @@ struct NovelCollection: View {
                 }
             }
             .padding(.horizontal)
+            .padding(.top)
         }
         .navigationTitle("Novels")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

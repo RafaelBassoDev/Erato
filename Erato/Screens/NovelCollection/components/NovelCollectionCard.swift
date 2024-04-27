@@ -19,10 +19,12 @@ struct NovelCollectionCard: View {
     }
         
     var body: some View {
-        HStack(alignment: .center) {
-            Rectangle()
-                .fill(Color.red)
-                .frame(width: 140, height: 195)
+        HStack(alignment: .center, spacing: 20) {
+            Image(novel.coverUrl ?? "image_not_found", bundle: .main)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 140, height: 195, alignment: .center)
+                .clipped()
             
             VStack(alignment: .leading, spacing: 10) {
                 Group {

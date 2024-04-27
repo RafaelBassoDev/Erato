@@ -35,9 +35,11 @@ struct NovelDetailHeader: View {
             
             Spacer()
             
-            Rectangle()
-                .fill(.red)
-                .frame(maxWidth: 130, maxHeight: 180)
+            Image(novel.coverUrl ?? "image_not_found", bundle: .main)
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: 130, maxHeight: 180, alignment: .center)
+                .clipped()
         }
     }
 }
