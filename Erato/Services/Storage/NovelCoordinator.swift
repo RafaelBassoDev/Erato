@@ -28,9 +28,17 @@ extension NovelCoordinator {
         return await storage.getStoredNovels()
     }
     
-    func getLastReadChapter() async -> Chapter {
-        // get last chapter from user defaults
-        return Chapter(number: 10, title: "", content: "")
+    func getLastReadChapter() async -> Chapter? {
+        if let currentNovel {
+            return await storage.getLastReadChapter(for: currentNovel)
+        }
+        return nil
+    }
+    
+    func setLastReadChapter() {
+        if let currentNovel, let currentChapter {
+            storage.setLastReadNovelAndChapter(novel: currentNovel, chapter: currentChapter)
+        }
     }
 }
 
@@ -59,6 +67,7 @@ extension NovelCoordinator {
 extension NovelCoordinator {
     func setCurrentChapter(_ chapter: Chapter) {
         currentChapter = chapter
+        setLastReadChapter()
     }
     
     func setCurrentNovel(_ novel: Novel) {

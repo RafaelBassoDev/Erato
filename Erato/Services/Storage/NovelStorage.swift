@@ -9,6 +9,8 @@ import Foundation
 
 protocol NovelStorage {
     func getStoredNovels() async -> [Novel]
+    func setLastReadNovelAndChapter(novel: Novel, chapter: Chapter)
+    func getLastReadChapter(for novel: Novel) async -> Chapter?
 }
 
 enum NovelStorageError: Error {

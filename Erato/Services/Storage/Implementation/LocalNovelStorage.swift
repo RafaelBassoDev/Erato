@@ -8,7 +8,7 @@
 import Foundation
 
 class LocalNovelStorage: NovelStorage {
-    
+    let userDefaults = UserDefaults.standard
     var cachedNovels: [Novel] = []
     
     func getStoredNovels() async -> [Novel] {
@@ -29,5 +29,25 @@ class LocalNovelStorage: NovelStorage {
         }
         
         return storedNovels
+    }
+    
+    func setLastReadNovelAndChapter(novel: Novel, chapter: Chapter) {
+        var values: [String: Int] = userDefaults.object(forKey: "lastReadNovelChapter") as? [String: Int] ?? [:]
+        
+        values[novel.title] = chapter.number
+        
+        userDefaults.set(values, forKey: "lastReadNovelChapter")
+    }
+    
+    func getLastReadChapter(for novel: Novel) async -> Chapter? {
+        let values: [String: Int] = userDefaults.object(forKey: "lastReadNovelChapter") as? [String: Int] ?? [:]
+        
+        guard let lastReadChapterNumber = values[novel.title] else {
+            return nil
+        }
+        
+        return novel.chapters.first { chapter in
+            chapter.number == lastReadChapterNumber
+        }
     }
 }
