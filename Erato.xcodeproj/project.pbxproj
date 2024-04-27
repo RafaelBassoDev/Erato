@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		550E17D02BDBD12200B4A308 /* battle_through_the_heavens.json in Resources */ = {isa = PBXBuildFile; fileRef = 550E17CF2BDBD12200B4A308 /* battle_through_the_heavens.json */; };
+		550E17D22BDD3FB500B4A308 /* NovelStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E17D12BDD3FB500B4A308 /* NovelStorage.swift */; };
 		551596482B73B93500462B38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 551596472B73B93500462B38 /* GoogleService-Info.plist */; };
 		5515964F2B73BE0800462B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515964E2B73BE0800462B38 /* AppDelegate.swift */; };
 		551596512B73E47100462B38 /* ReadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551596502B73E47100462B38 /* ReadingController.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		550E17CF2BDBD12200B4A308 /* battle_through_the_heavens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = battle_through_the_heavens.json; sourceTree = "<group>"; };
+		550E17D12BDD3FB500B4A308 /* NovelStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelStorage.swift; sourceTree = "<group>"; };
 		551596472B73B93500462B38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5515964E2B73BE0800462B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		551596502B73E47100462B38 /* ReadingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				554048CB2B6C4A2B00B22661 /* Settings */,
+				550E17D12BDD3FB500B4A308 /* NovelStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550E17D22BDD3FB500B4A308 /* NovelStorage.swift in Sources */,
 				554048D42B6C4BA200B22661 /* Novel.swift in Sources */,
 				554048CA2B6C383300B22661 /* Chapter.swift in Sources */,
 				55DCF67B2B73B08C00F2E3E8 /* View.swift in Sources */,
