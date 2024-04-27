@@ -20,14 +20,16 @@ struct NovelDetailChapterList: View {
                 NavigationLink(chapter.title) {
                     ReadingController(currentChapter: chapter)
                 }
-                .padding(.vertical)
                 .id(chapter.number)
-//                .foregroundStyle(lastChapter != nil && (lastChapter?.number == chapter.number) ? .secondary : .primary)
+                .padding(.vertical)
+                .foregroundStyle(lastChapter != nil && (chapter.number < lastChapter!.number) ? .secondary : .primary)
             }
             .listStyle(.plain)
-            .onAppear {
+            .onChange(of: lastChapter) {
                 if let lastChapterNumber = lastChapter?.number {
-                    proxy.scrollTo(lastChapterNumber)
+                    withAnimation(.easeOut) {
+                        proxy.scrollTo(lastChapterNumber, anchor: .center)
+                    }
                 }
             }
         }
