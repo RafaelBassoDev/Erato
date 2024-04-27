@@ -19,15 +19,17 @@ struct ReadingScreen: View {
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
-                VStack(spacing: 20) {
+                VStack(alignment: .leading, spacing: 20) {
                     Text(chapter.title)
-                        .font(.title)
+                        .font(.largeTitle)
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .id("title")
+                        .padding(.bottom)
                     
-                    Text(chapter.content)
+                    Text(chapter.getFormattedContent())
                         .applyingFontSettings(fontSettings)
+                        .padding(.bottom)
                     
                     HStack {
                         IconedButton(systemName: "chevron.left") {
@@ -35,7 +37,7 @@ struct ReadingScreen: View {
                             delegate?.didClickPrevious()
                         }
                         
-                        IconedButton(systemName: "list.dash") {
+                        IconedButton(systemName: "return") {
                             delegate?.didClickChapterList()
                         }
                         
@@ -51,6 +53,14 @@ struct ReadingScreen: View {
                 .padding(.horizontal)
                 .padding(.bottom, 300)
             }
+            .gesture(
+                DragGesture(minimumDistance: 100, coordinateSpace: .local)
+                    .onEnded { proxy in
+                        if proxy.translation.width > 0 {
+                            dismiss()
+                        }
+                    }
+            )
         }
     }
 }

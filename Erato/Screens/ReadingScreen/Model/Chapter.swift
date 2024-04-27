@@ -19,6 +19,12 @@ class Chapter: Decodable {
     }
 }
 
+extension Chapter {
+    func getFormattedContent() -> String {
+        content.split(whereSeparator: \.isNewline).joined(separator: "\n\n")
+    }
+}
+
 extension Chapter: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(number)

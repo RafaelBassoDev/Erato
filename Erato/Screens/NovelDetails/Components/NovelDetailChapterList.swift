@@ -33,7 +33,7 @@ struct NovelDetailChapterList: View {
                 }
             }
         }
-        .task {
+        .task(priority: .userInitiated) {
             lastChapter = await novelCoordinator.getLastReadChapter()
         }
     }
