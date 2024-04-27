@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsSheet<Content>: View where Content: View {
     @EnvironmentObject var fontSettings: FontSettings
     
-    @State private var screenDimOpacity: Double = 0.0
+    @State private var screenDimOpacity: Double = 0
     
     @Binding var showSettings: Bool
     
@@ -21,10 +21,10 @@ struct SettingsSheet<Content>: View where Content: View {
         GeometryReader { proxy in
             ZStack(alignment: .bottom) {
                 content()
-                    .overlay(.black.opacity(screenDimOpacity))
                     .onTapGesture {
                         showSettings = false
                     }
+                    .opacity(1-screenDimOpacity)
                 
                 Form {
                     Section("Font") {
@@ -80,7 +80,7 @@ struct SettingsSheet<Content>: View where Content: View {
                     Section("Screen Dim") {
                         Slider(
                             value: $screenDimOpacity,
-                            in: 0...1,
+                            in: 0.05...0.95,
                             step: 0.01
                         )
                     }
@@ -114,7 +114,6 @@ struct SettingsSheet<Content>: View where Content: View {
 struct SettingsSheet_Preview: PreviewProvider {
     struct ContainerView: View {
         @State var show = false
-        @State var opacity = 0.0
         
         var body: some View {
             SettingsSheet(showSettings: $show) {

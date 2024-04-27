@@ -26,6 +26,7 @@ struct ReadingController: View, ReadingScreenDelegate {
                             showSettings = true
                         }
                 )
+                .background(.background)
         }
         .toolbar(.hidden, for: .navigationBar)
         .loading(isLoading)
