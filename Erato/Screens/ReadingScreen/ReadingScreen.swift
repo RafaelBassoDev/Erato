@@ -49,6 +49,7 @@ struct ReadingScreen: View {
                     .padding(.top)
                 }
                 .padding(.horizontal)
+                .padding(.bottom, 300)
             }
         }
     }
