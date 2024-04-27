@@ -16,15 +16,20 @@ struct EratoApp: App {
     
     @State var novels: [Novel] = []
     
+    @State var isLoading = false
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 NovelCollection(novels: novels)
+                    .loading(isLoading)
             }
             .environmentObject(fontSettings)
             .environmentObject(novelCoordinator)
-            .task {
+            .task(priority: .userInitiated) {
+                isLoading = true
                 novels = await novelCoordinator.fetchNovels()
+                isLoading = false
             }
         }
     }
