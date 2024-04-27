@@ -13,17 +13,13 @@ struct ReadingController: View, ReadingScreenDelegate {
     @Environment(\.dismiss) private var dismiss
     
     @State var currentChapter: Chapter
-    @State var screenDimOpacity: Double = 0
-    
-    @State var count = 0
     
     @State var isLoading = false
     @State var showSettings = false
     
     var body: some View {
-        SettingsSheet(showSettings: $showSettings, screenDimOpacity: $screenDimOpacity) {
+        SettingsSheet(showSettings: $showSettings) {
             ReadingScreen(chapter: currentChapter, delegate: self)
-                .overlay(.black.opacity(screenDimOpacity))
                 .gesture(
                     TapGesture(count: 3)
                         .onEnded {
@@ -44,8 +40,6 @@ struct ReadingController: View, ReadingScreenDelegate {
     }
     
     func didClickNext() {
-        currentChapter.IsRead()
-        
         Task(priority: .userInitiated) {
             if let nextChapter = try? await loadNextChapter() {
                 currentChapter = nextChapter
@@ -66,15 +60,15 @@ extension ReadingController {
             isLoading = false
         }
         
-        count += 1
+//        try await Task.sleep(nanoseconds: 3_000_000_000)
         
-        try await Task.sleep(nanoseconds: 3_000_000_000)
+        let nextChapterNumber = currentChapter.number + 1
         
-        guard count < MockData.chapters.count else {
+        guard nextChapterNumber <= MockData.chapters.count else {
             return nil
         }
         
-        return MockData.chapters[count]
+        return MockData.chapters[nextChapterNumber-1]
     }
     
     private func loadPreviousChapter() async throws -> Chapter? {
@@ -84,15 +78,15 @@ extension ReadingController {
             isLoading = false
         }
         
-        count -= 1
+//        try await Task.sleep(nanoseconds: 3_000_000_000)
         
-        try await Task.sleep(nanoseconds: 3_000_000_000)
+        let nextChapterNumber = currentChapter.number - 1
         
-        guard count < MockData.chapters.count else {
+        guard nextChapterNumber >= 1 else {
             return nil
         }
         
-        return MockData.chapters[count]
+        return MockData.chapters[nextChapterNumber-1]
     }
 }
 

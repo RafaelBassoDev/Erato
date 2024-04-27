@@ -10,8 +10,9 @@ import SwiftUI
 struct SettingsSheet<Content>: View where Content: View {
     @EnvironmentObject var fontSettings: FontSettings
     
+    @State private var screenDimOpacity: Double = 0.0
+    
     @Binding var showSettings: Bool
-    @Binding var screenDimOpacity: Double
     
     @State var offset: CGSize = CGSize(width: 0, height: 400)
     let content: () -> Content
@@ -20,6 +21,7 @@ struct SettingsSheet<Content>: View where Content: View {
         GeometryReader { proxy in
             ZStack(alignment: .bottom) {
                 content()
+                    .overlay(.black.opacity(screenDimOpacity))
                     .onTapGesture {
                         showSettings = false
                     }
@@ -115,7 +117,7 @@ struct SettingsSheet_Preview: PreviewProvider {
         @State var opacity = 0.0
         
         var body: some View {
-            SettingsSheet(showSettings: $show, screenDimOpacity: $opacity) {
+            SettingsSheet(showSettings: $show) {
                 Toggle(isOn: $show) {
                     Text("show options")
                 }
