@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Novel {
+struct Novel: Decodable {
     let id: UUID
     
     let title: String

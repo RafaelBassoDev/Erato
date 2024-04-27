@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Chapter {
+class Chapter: Decodable {
     let number: Int
     let title: String
     let content: String
