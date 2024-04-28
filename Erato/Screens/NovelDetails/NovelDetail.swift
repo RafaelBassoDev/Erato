@@ -10,7 +10,7 @@ import SwiftUI
 struct NovelDetail: View {
     @EnvironmentObject var novelCoordinator: NovelCoordinator
     
-    @State var currentSubMenu: String = "Description"
+    @State var currentSubMenu: String = "Chapters"
     
     let novel: Novel
     
@@ -19,7 +19,7 @@ struct NovelDetail: View {
             NovelDetailHeader(novel: novel)
                 .padding()
             
-            TabMenuBar(options: ["Description", "Chapters"]) { option in
+            TabMenuBar(options: ["Chapters", "Description"]) { option in
                 currentSubMenu = option
             }
             

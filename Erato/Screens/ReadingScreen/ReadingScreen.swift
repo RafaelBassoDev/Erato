@@ -19,7 +19,7 @@ struct ReadingScreen: View {
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
+                VStack(spacing: 20) {
                     Text(chapter.title)
                         .font(.largeTitle)
                         .bold()
