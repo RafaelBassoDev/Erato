@@ -14,18 +14,25 @@ class LocalNovelStorage: NovelStorage {
     func getStoredNovels() async -> [Novel] {
         var storedNovels = [Novel]()
         
+        let novelJsonFileUrl = [
+            "battle_through_the_heavens",
+            "immortal_mortal"
+        ]
+        
         do {
-            guard let path = Bundle.main.path(forResource: "battle_through_the_heavens", ofType: "json") else {
-                throw NovelStorageError.readingFile
+            for jsonFile in novelJsonFileUrl {
+                guard let path = Bundle.main.path(forResource: jsonFile, ofType: "json") else {
+                    throw NovelStorageError.readingFile
+                }
+                
+                guard let fileData = try String(contentsOfFile: path, encoding: String.Encoding.utf8).data(using: .utf8) else {
+                    throw NovelStorageError.encodingData
+                }
+                
+                storedNovels.append(try JSONDecoder().decode(Novel.self, from: fileData))
             }
-            
-            guard let fileData = try String(contentsOfFile: path, encoding: String.Encoding.utf8).data(using: .utf8) else {
-                throw NovelStorageError.encodingData
-            }
-            
-            storedNovels.append(try JSONDecoder().decode(Novel.self, from: fileData))
         } catch {
-            print(error)
+            print("<LocalNovelStorage> Error: \(error)")
         }
         
         return storedNovels
