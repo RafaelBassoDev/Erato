@@ -33,6 +33,7 @@
 		554048E72B6D5EAC00B22661 /* TabMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048E62B6D5EAC00B22661 /* TabMenuOption.swift */; };
 		554048E92B6D726700B22661 /* NovelDetailDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048E82B6D726700B22661 /* NovelDetailDescription.swift */; };
 		554048EB2B6D72E800B22661 /* NovelDetailChapterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554048EA2B6D72E800B22661 /* NovelDetailChapterList.swift */; };
+		556427362BE1643000AB3402 /* immortal_mortal.json in Resources */ = {isa = PBXBuildFile; fileRef = 556427352BE1643000AB3402 /* immortal_mortal.json */; };
 		55DCF67B2B73B08C00F2E3E8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DCF67A2B73B08C00F2E3E8 /* View.swift */; };
 		55F198692BD94AF200FF02A4 /* IconedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F198682BD94AF200FF02A4 /* IconedButton.swift */; };
 		55F1986B2BD95AA900FF02A4 /* ReadingScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F1986A2BD95AA900FF02A4 /* ReadingScreenDelegate.swift */; };
@@ -86,6 +87,7 @@
 		554048E62B6D5EAC00B22661 /* TabMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuOption.swift; sourceTree = "<group>"; };
 		554048E82B6D726700B22661 /* NovelDetailDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDetailDescription.swift; sourceTree = "<group>"; };
 		554048EA2B6D72E800B22661 /* NovelDetailChapterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDetailChapterList.swift; sourceTree = "<group>"; };
+		556427352BE1643000AB3402 /* immortal_mortal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = immortal_mortal.json; path = ../../../../../../Downloads/immortal_mortal.json; sourceTree = "<group>"; };
 		55DCF67A2B73B08C00F2E3E8 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		55F198682BD94AF200FF02A4 /* IconedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconedButton.swift; sourceTree = "<group>"; };
 		55F1986A2BD95AA900FF02A4 /* ReadingScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingScreenDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		550E17CE2BDBD05E00B4A308 /* AppAssets */ = {
 			isa = PBXGroup;
 			children = (
+				556427352BE1643000AB3402 /* immortal_mortal.json */,
 				550E17CF2BDBD12200B4A308 /* battle_through_the_heavens.json */,
 			);
 			path = AppAssets;
@@ -452,6 +455,7 @@
 				554048982B6C090800B22661 /* Preview Assets.xcassets in Resources */,
 				554048952B6C090800B22661 /* Assets.xcassets in Resources */,
 				551596482B73B93500462B38 /* GoogleService-Info.plist in Resources */,
+				556427362BE1643000AB3402 /* immortal_mortal.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
